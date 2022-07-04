@@ -12,14 +12,14 @@
 <body style="font-family: Montserrat, ui-monospace;">
 
 <div class="bg-white bg-[#2F70A6] fixed top-0 left-0 container max-w-full">
-    <div class="h-[100px] flex justify-between items-center container mx-auto">
+    <div class="h-[50px] md:h-[100px] flex justify-between items-center container mx-auto">
         <div class="flex items-center cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-            <img class="mt-5" src="assets/logo_vyatsu.png" alt="vyatsu_logo"/>
-            <div class="text-white text-[16px] ml-[20px]">
+            <img class="ml-[20px] mt-2 md:mt-5 h-[55px] md:h-auto" src="assets/logo_vyatsu.png" alt="vyatsu_logo"/>
+            <div class="hidden md:block text-white text-[16px] ml-[20px]">
                 ИНЖИНИРИНГОВЫЙ ЦЕНТР<br>КИРОВСКОЙ ОБЛАСТИ
             </div>
         </div>
-        <div class="flex justify-between text-white md:w-1/2">
+        <div class="hidden md:flex justify-between text-white md:w-1/2">
             <a class="text-[13px]" href="#about">О нас</a>
             <a class="text-[13px]" href="#about">Возможности</a>
             <a class="text-[13px]" href="#for-whom">Для кого</a>
@@ -30,14 +30,14 @@
     </div>
 </div>
 <!---->
-<div class="h-[65vh] flex flex-col justify-center items-center container mx-auto mt-[100px]">
-    <img src="assets/logo.svg" alt="logo" class="h-[30vh]"/>
-    <div class="text-[40px] text-center font-[900] text-[#2F70A6] mt-5">ИНЖИНИРИНГОВЫЙ ЦЕНТР ВЯТГУ</div>
+<div class="h-[50vh] min-h-[400px] flex flex-col justify-center items-center container px-3 mx-auto mt-[120px]">
+    <img src="assets/logo.svg" alt="logo" class="w-[30vw] max-w-[300px]"/>
+    <div class="text-[24px] md:text-[40px] text-center font-[900] text-[#2F70A6] mt-5">ИНЖИНИРИНГОВЫЙ ЦЕНТР ВЯТГУ</div>
 </div>
 <!---->
-<div id="about" class="container mx-auto my-10">
-    <div class="text-[40px] text-center mb-10">О НАС</div>
-    <div class="grid grid-cols-3 gap-4">
+<div id="about" class="container px-3 md:mx-auto my-10">
+    <div class="text-[20px] md:text-[32px] text-center mb-10">О НАС</div>
+    <div class="md:grid grid-cols-3 gap-4">
         <div class="col-span-1 row-span-2 overflow-hidden bg-cover"
              style="background-image: url('assets/image.png')"></div>
         <div class="col-span-2 leading-[36px] text-[16px]">
@@ -52,9 +52,9 @@
     </div>
 </div>
 <!---->
-<div id="for-whom" class="container mx-auto my-10">
-    <div class="text-[40px] text-center mb-10">ДЛЯ КОГО</div>
-    <div class="grid grid-cols-3 gap-4">
+<div id="for-whom" class="container px-3 md:mx-auto my-10">
+    <div class="text-[20px] md:text-[32px] text-center mb-10">ДЛЯ КОГО</div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="flex flex-col justify-center items-center bg-gray-100 rounded">
             <div class="w-[70] h-[70] bg-gray-500 rounded my-10">
                 <!--                Иконка-->
@@ -130,9 +130,9 @@
     </div>
 </div>
 <!---->
-<div id="interaction" class="container mx-auto my-10 relative">
-    <div class="text-[40px] text-center mb-10">ПОРЯДОК ВЗАИМОДЕЙСТВИЯ</div>
-    <div class="grid grid-cols-4 gap-4">
+<div id="interaction" class="container px-3 md:mx-auto my-10">
+    <div class="text-[20px] md:text-[32px] text-center mb-10">ПОРЯДОК ВЗАИМОДЕЙСТВИЯ</div>
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
         <div class="rounded bg-gray-100 p-5 flex">
             <div class="flex flex-col items-center">
                 <div class="rounded bg-white h-[50px] w-[50px] text-[#048974] text-3xl flex justify-center items-center font-bold">
