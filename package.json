@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.7",
+    "jquery": "^3.6.0",
     "postcss": "^8.4.14"
   }
 }

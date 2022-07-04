@@ -4,14 +4,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link href="./dist/output.css" rel="stylesheet">
     <!--    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>-->
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <title>Инжиниринговый центр</title>
 </head>
 <body style="font-family: Montserrat, ui-monospace;">
 
-<div class="bg-white bg-[#2F70A6] fixed top-0 left-0 container max-w-full">
+<div class="bg-white bg-[#2F70A6] fixed top-0 left-0 container max-w-full z-50">
     <div class="h-[50px] md:h-[100px] flex justify-between items-center container mx-auto">
         <div class="flex items-center cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
             <img class="ml-[20px] mt-2 md:mt-5 h-[55px] md:h-auto" src="assets/logo_vyatsu.png" alt="vyatsu_logo"/>
@@ -21,25 +24,26 @@
         </div>
         <div class="hidden md:flex justify-between text-white md:w-1/2">
             <a class="text-[13px]" href="#about">О нас</a>
-            <a class="text-[13px]" href="#about">Возможности</a>
+            <a class="text-[13px]" href="#capabilities">Возможности</a>
             <a class="text-[13px]" href="#for-whom">Для кого</a>
             <a class="text-[13px]" href="#interaction">Взаимодействие</a>
             <a class="text-[13px]" href="#about">Проекты</a>
-            <a class="text-[13px]" href="#about">Контакты</a>
+            <a class="text-[13px]" href="#contact">Контакты</a>
         </div>
     </div>
 </div>
-<!---->
+
 <div class="h-[50vh] min-h-[400px] flex flex-col justify-center items-center container px-3 mx-auto mt-[120px]">
     <img src="assets/logo.svg" alt="logo" class="w-[30vw] max-w-[300px]"/>
     <div class="text-[24px] md:text-[40px] text-center font-[900] text-[#2F70A6] mt-5">ИНЖИНИРИНГОВЫЙ ЦЕНТР ВЯТГУ</div>
 </div>
-<!---->
-<div id="about" class="container px-3 md:mx-auto my-10">
-    <div class="text-[20px] md:text-[32px] text-center mb-10">О НАС</div>
+
+<div id="about" class="container px-3 mx-auto my-10">
+    <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">О НАС</div>
     <div class="md:grid grid-cols-3 gap-4">
         <div class="col-span-1 row-span-2 overflow-hidden bg-cover"
-             style="background-image: url('assets/image.png')"></div>
+             style="background-image: url('assets/image.png')">
+        </div>
         <div class="col-span-2 leading-[36px] text-[16px]">
             На базе ВятГУ создан и успешно функционирует Инжиниринговый центр (далее – ИЦ ВятГУ).
             На территории 8000 кв.м. собран квалифицированный инженерно-технический персонал, способный решать самые
@@ -51,9 +55,114 @@
         </div>
     </div>
 </div>
+
+<div id="capabilities" class="container px-3 mx-auto my-10">
+    <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">НАШИ ВОЗМОЖНОСТИ</div>
+    <div class="flex flex-col-reverse md:grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="relative">
+            <div class="flex justify-between items-center w-full absolute top-[50%]" id="customize-controls"
+                 aria-label="Carousel Navigation" tabindex="0">
+                <div class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+                    <div class="origin-center rotate-[135deg]" style="border: solid #048974;
+                    border-width: 0 4px 4px 0;
+                    display: inline-block;
+                    padding: 10px;">
+                    </div>
+                </div>
+                <div class="next flex justify-end" data-controls="next" aria-controls="customize" tabindex="-1">
+                    <div class="origin-center -rotate-45" style="border: solid #048974;
+                    border-width: 0 4px 4px 0;
+                    display: inline-block;
+                    padding: 10px;">
+                    </div>
+                </div>
+            </div>
+            <div class="px-[3rem]">
+                <div class="mx-auto slider hidden md:block" id="">
+                    <div>
+                        <div class="flex md:grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[500px]">
+                            <div class="bg-gray-500 w-full"></div>
+                            <div class="bg-gray-500 w-full md:row-span-2"></div>
+                            <div class="bg-gray-500 w-full md:row-span-2"></div>
+                            <div class="bg-gray-500 w-full md:row-span-2"></div>
+                            <div class="bg-gray-500 w-full"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex md:grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[500px]">
+                            <div class="bg-red-500 w-full"></div>
+                            <div class="bg-red-500 w-full md:row-span-2"></div>
+                            <div class="bg-red-500 w-full md:row-span-2"></div>
+                            <div class="bg-red-500 w-full md:row-span-2"></div>
+                            <div class="bg-red-500 w-full"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="md:grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[500px]">
+                            <div class="bg-green-500 w-full"></div>
+                            <div class="bg-green-500 w-full md:row-span-2"></div>
+                            <div class="bg-green-500 w-full md:row-span-2"></div>
+                            <div class="bg-green-500 w-full md:row-span-2"></div>
+                            <div class="bg-green-500 w-full"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-auto sliderMobile md:hidden">
+                    <div class="w-[50px] h-[500px] bg-gray-500"></div>
+                    <div class="w-[50px] h-[500px] bg-red-500"></div>
+                    <div class="w-[50px] h-[500px] bg-green-500"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flex flex-col row-span-2">
+            <div class="flex items-center mb-10 last:mb-0">
+                <div class="origin-center -rotate-45 mx-10" style="border: solid #048974;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    padding: 5px;">
+                </div>
+                <div>Реализация полного цикла технологического обновления предприятия;</div>
+            </div>
+            <div class="flex items-center mb-10 last:mb-0">
+                <div class="origin-center -rotate-45 mx-10" style="border: solid #048974;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    padding: 5px;">
+                </div>
+                <div>Реализация полного цикла технологического обновления предприятия;</div>
+            </div>
+            <div class="flex items-center mb-10 last:mb-0">
+                <div class="origin-center -rotate-45 mx-10" style="border: solid #048974;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    padding: 5px;">
+                </div>
+                <div>Реализация полного цикла технологического обновления предприятия;</div>
+            </div>
+            <div class="flex items-center mb-10 last:mb-0">
+                <div class="origin-center -rotate-45 mx-10" style="border: solid #048974;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    padding: 5px;">
+                </div>
+                <div>Реализация полного цикла технологического обновления предприятия;</div>
+            </div>
+            <div class="flex items-center mb-10 last:mb-0">
+                <div class="origin-center -rotate-45 mx-10" style="border: solid #048974;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    padding: 5px;">
+                </div>
+                <div>Реализация полного цикла технологического обновления предприятия;</div>
+            </div>
+        </div>
+    </div>
+</div>
 <!---->
-<div id="for-whom" class="container px-3 md:mx-auto my-10">
-    <div class="text-[20px] md:text-[32px] text-center mb-10">ДЛЯ КОГО</div>
+<div id="for-whom" class="container px-3 mx-auto my-10">
+    <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">ДЛЯ КОГО</div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="flex flex-col justify-center items-center bg-gray-100 rounded">
             <div class="w-[70] h-[70] bg-gray-500 rounded my-10">
@@ -130,8 +239,8 @@
     </div>
 </div>
 <!---->
-<div id="interaction" class="container px-3 md:mx-auto my-10">
-    <div class="text-[20px] md:text-[32px] text-center mb-10">ПОРЯДОК ВЗАИМОДЕЙСТВИЯ</div>
+<div id="interaction" class="container px-3 mx-auto my-10">
+    <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">ПОРЯДОК ВЗАИМОДЕЙСТВИЯ</div>
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
         <div class="rounded bg-gray-100 p-5 flex">
             <div class="flex flex-col items-center">
@@ -206,6 +315,15 @@
             </div>
         </div>
     </div>
+    <div class="my-10 h-[61px] bg-[#2F70A6] flex justify-center items-center md:max-w-[370px] md:w-1/2 mx-auto cursor-pointer">
+        <div class="text-white font-bold">
+            Написать
+        </div>
+    </div>
+</div>
+<!---->
+<div id="contact">
+
 </div>
 <!---->
 </body>
@@ -219,5 +337,27 @@
             const y = targetEl.getBoundingClientRect().top + window.pageYOffset - pageTopOffset;
             window.scrollTo({top: y, behavior: 'smooth'});
         });
+    });
+
+    const slider = tns({
+        container: '.slider',
+        items: 1,
+        slideBy: 'page',
+        autoplay: true,
+        autoplayButtonOutput: false,
+        gutter: 10,
+        controlsContainer: "#customize-controls",
+        navPosition: "bottom"
+    });
+
+    const sliderMobile = tns({
+        container: '.sliderMobile',
+        items: 1,
+        slideBy: 'page',
+        autoplay: true,
+        autoplayButtonOutput: false,
+        gutter: 10,
+        controlsContainer: "#customize-controls",
+        navPosition: "bottom"
     });
 </script>
