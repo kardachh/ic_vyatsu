@@ -62,14 +62,14 @@
         <div class="relative">
             <div class="flex justify-between items-center w-full absolute top-[50%]" id="customize-controls"
                  aria-label="Carousel Navigation" tabindex="0">
-                <div class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+                <div class="prev cursor-pointer" data-controls="prev" aria-controls="customize" tabindex="-1">
                     <div class="origin-center rotate-[135deg]" style="border: solid #048974;
                     border-width: 0 4px 4px 0;
                     display: inline-block;
                     padding: 10px;">
                     </div>
                 </div>
-                <div class="next flex justify-end" data-controls="next" aria-controls="customize" tabindex="-1">
+                <div class="next flex justify-end cursor-pointer" data-controls="next" aria-controls="customize" tabindex="-1">
                     <div class="origin-center -rotate-45" style="border: solid #048974;
                     border-width: 0 4px 4px 0;
                     display: inline-block;
@@ -322,8 +322,54 @@
     </div>
 </div>
 <!---->
-<div id="contact">
+<div id="contact" class=" mt-10" style="
+        background: linear-gradient(90deg, #2F70A6 10.9%, rgba(47, 112, 166, 0.855096) 41.43%, rgba(47, 112, 166, 0.632766) 84.54%, rgba(47, 112, 166, 0.318018) 107.57%, rgba(47, 112, 166, 0) 115.63%), url('assets/back.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;">
+    <div class="container py-16 px-3 mx-auto flex justify-between">
+        <div class="flex flex-col justify-between">
+            <div class="text-white text-lg font-bold">Другая стр.</div>
+            <a class="text-[rgba(255,255,255,0.6)] cursor-pointer">Пункт 1</a>
+            <a class="text-[rgba(255,255,255,0.6)] cursor-pointer">Пункт 2</a>
+            <a class="text-[rgba(255,255,255,0.6)] cursor-pointer">Пункт 3</a>
+            <a class="text-[rgba(255,255,255,0.6)] cursor-pointer">Пункт 4</a>
+            <a class="text-[rgba(255,255,255,0.6)] cursor-pointer">Пункт 5</a>
+            <a class="text-[rgba(255,255,255,0.6)] cursor-pointer">Пункт 6</a>
+        </div>
+        <div>
+            <div class="my-10 first:my-0 last:my-0">
+                <div class="text-white text-lg font-bold">Адрес:</div>
+                <div class="text-white">г. Киров ул. Московская, 36</div>
+            </div>
+            <div class="my-10 my-10 first:my-0 last:my-0">
+                <div class="text-white text-lg font-bold">Телефон:</div>
+                <div class="text-white">+7 (912) 734-77-91</div>
+            </div>
+            <div class="my-10 my-10 first:my-0 last:my-0">
+                <div class="text-white text-lg font-bold">Email:</div>
+                <div class="text-white">email@example.com</div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full bg-[#2F70A6] drop-shadow-[0_-10px_30px_rgba(0,0,0,0.25)]">
+        <div class="container mx-auto h-[50px] md:h-[100px] flex justify-between items-center">
+            <div class="flex items-center">
+                <a class="h-[30px] w-[30px] bg-gray-300 mx-5 first:mx-0 last:mx-0"></a>
+                <a class="h-[30px] w-[30px] bg-gray-300 mx-5 first:mx-0 last:mx-0"></a>
+                <a class="h-[30px] w-[30px] bg-gray-300 mx-5 first:mx-0 last:mx-0"></a>
+            </div>
+            <div class="hidden md:flex justify-between text-white md:w-1/2">
+                <a class="text-[13px]" href="#about">О нас</a>
+                <a class="text-[13px]" href="#capabilities">Возможности</a>
+                <a class="text-[13px]" href="#for-whom">Для кого</a>
+                <a class="text-[13px]" href="#interaction">Взаимодействие</a>
+                <a class="text-[13px]" href="#about">Проекты</a>
+                <a class="text-[13px]" href="#contact">Контакты</a>
+            </div>
+        </div>
 
+    </div>
 </div>
 <!---->
 </body>
