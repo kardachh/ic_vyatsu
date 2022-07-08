@@ -14,33 +14,49 @@
 </head>
 <body style="font-family: Montserrat, ui-monospace;">
 
-<div class="bg-white bg-[#2F70A6] fixed top-0 left-0 container max-w-full z-50">
-    <div class="h-[50px] md:h-[100px] flex justify-between items-center container mx-auto">
-        <div class="flex items-center cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-            <img class="ml-[20px] mt-2 md:mt-5 h-[55px] md:h-auto" src="assets/logo_vyatsu.png" alt="vyatsu_logo"/>
-            <div class="hidden md:block text-white text-[16px] ml-[20px]">
+<div id="top-menu" class="bg-[#2F70A6] fixed top-0 left-0 container max-w-full z-50 px-5 xl:px-0">
+    <div id="top-row"
+         class="h-[50px] xl:h-[100px] flex flex-col xl:flex-row justify-between xl:items-center container mx-auto relative ">
+        <div class="flex items-center cursor-pointer w-fit" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <img id="logo" class="relative ml-[20px] mt-0 xl:mt-5 h-[60px] xl:h-auto" src="assets/logo_vyatsu.png"
+                 alt="vyatsu_logo"/>
+            <div id="name" class="hidden xl:block text-white text-[16px] xl:ml-[20px] font-bold">
                 ИНЖИНИРИНГОВЫЙ ЦЕНТР<br>КИРОВСКОЙ ОБЛАСТИ
             </div>
         </div>
-        <div class="hidden md:flex items-center justify-between text-white md:w-2/3">
-            <a class="text-[13px]" href="#about">О нас</a>
-            <a class="text-[13px]" href="#capabilities">Возможности</a>
-            <a class="text-[13px]" href="#for-whom">Для кого</a>
-            <a class="text-[13px]" href="#interaction">Взаимодействие</a>
-            <a class="text-[13px]" href="#projects">Проекты</a>
-            <a class="text-[13px]" href="#contact">Контакты</a>
-
-            <div class="flex items-center justify-center">
-                <div class="flex border-b ">
-                    <input type="text" class="px-4 py-2 w-[200px] bg-transparent">
+        <div id="links" class="hidden xl:flex items-center justify-between text-white xl:w-3/5 space-y-5">
+            <div class="flex pt-10 xl:pt-0 order-last w-full xl:w-[200px]">
+                <div class="flex border-b w-full">
+                    <input type="text" class="px-4 py-2 bg-transparent w-full ">
                     <button class="flex items-center justify-center px-4">
                         <svg class="w-6 h-6 text-gray-600" fill="#FFF" xmlns="http://www.w3.org/2000/svg"
                              viewBox="0 0 24 24">
                             <path
-                                    d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+                                    d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/>
                         </svg>
                     </button>
                 </div>
+            </div>
+            <div><a class="text-[13px]" href="#about">О нас</a></div>
+            <div><a class="text-[13px]" href="#capabilities">Возможности</a></div>
+            <div><a class="text-[13px]" href="#for-whom">Для кого</a></div>
+            <div><a class="text-[13px]" href="#interaction">Взаимодействие</a></div>
+            <div><a class="text-[13px]" href="#projects">Проекты</a></div>
+            <div><a class="text-[13px]" href="#contact">Контакты</a></div>
+
+
+        </div>
+        <div id="menu-mobile" class="absolute h-full right-[10px] xl:hidden cursor-pointer flex items-center">
+            <div id="open-mobile-menu" class="space-y-1">
+                <div class="w-5 h-0.5 bg-[#D9D9D9]"></div>
+                <div class="w-5 h-0.5 bg-[#D9D9D9]"></div>
+                <div class="w-5 h-0.5 bg-[#D9D9D9]"></div>
+            </div>
+            <div id="close-mobile-menu" class="hidden">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.414185" y="14.1421" width="20" height="2" rx="1" transform="rotate(-45 0.414185 14.1421)" fill="#D9D9D9"/>
+                    <rect x="1.41418" y="0.142136" width="20" height="2" rx="1" transform="rotate(45 1.41418 0.142136)" fill="#D9D9D9"/>
+                </svg>
             </div>
         </div>
     </div>
@@ -82,7 +98,8 @@
                     padding: 10px;">
                     </div>
                 </div>
-                <div class="next flex justify-end cursor-pointer" data-controls="next" aria-controls="customize" tabindex="-1">
+                <div class="next flex justify-end cursor-pointer" data-controls="next" aria-controls="customize"
+                     tabindex="-1">
                     <div class="origin-center -rotate-45" style="border: solid #048974;
                     border-width: 0 4px 4px 0;
                     display: inline-block;
@@ -130,11 +147,13 @@
         <div class="flex flex-col row-span-2 mb-10 md:mb-0 ">
             <div class="relative mb-6 last:mb-0">
                 <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
                     </svg>
                     <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]" style="width: calc(100% - 72px)">
+                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                         style="width: calc(100% - 72px)">
 
                     </div>
                 </div>
@@ -144,11 +163,13 @@
             </div>
             <div class="relative mb-6 last:mb-0">
                 <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
                     </svg>
                     <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]" style="width: calc(100% - 72px)">
+                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                         style="width: calc(100% - 72px)">
 
                     </div>
                 </div>
@@ -158,11 +179,13 @@
             </div>
             <div class="relative mb-6 last:mb-0">
                 <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
                     </svg>
                     <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]" style="width: calc(100% - 72px)">
+                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                         style="width: calc(100% - 72px)">
 
                     </div>
                 </div>
@@ -172,11 +195,13 @@
             </div>
             <div class="relative mb-6 last:mb-0">
                 <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
                     </svg>
                     <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]" style="width: calc(100% - 72px)">
+                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                         style="width: calc(100% - 72px)">
 
                     </div>
                 </div>
@@ -186,11 +211,13 @@
             </div>
             <div class="relative mb-6 last:mb-0">
                 <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
                     </svg>
                     <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]" style="width: calc(100% - 72px)">
+                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                         style="width: calc(100% - 72px)">
 
                     </div>
                 </div>
@@ -200,11 +227,13 @@
             </div>
             <div class="relative mb-6 last:mb-0">
                 <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
                     </svg>
                     <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]" style="width: calc(100% - 72px)">
+                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                         style="width: calc(100% - 72px)">
 
                     </div>
                 </div>
@@ -214,11 +243,13 @@
             </div>
             <div class="relative mb-6 last:mb-0">
                 <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
                     </svg>
                     <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]" style="width: calc(100% - 72px)">
+                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                         style="width: calc(100% - 72px)">
 
                     </div>
                 </div>
@@ -228,11 +259,13 @@
             </div>
             <div class="relative mb-6 last:mb-0">
                 <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
                     </svg>
                     <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]" style="width: calc(100% - 72px)">
+                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                         style="width: calc(100% - 72px)">
 
                     </div>
                 </div>
@@ -242,11 +275,13 @@
             </div>
             <div class="relative mb-6 last:mb-0">
                 <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
                     </svg>
                     <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]" style="width: calc(100% - 72px)">
+                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                         style="width: calc(100% - 72px)">
 
                     </div>
                 </div>
@@ -256,11 +291,13 @@
             </div>
             <div class="relative mb-6 last:mb-0">
                 <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
                     </svg>
                     <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]" style="width: calc(100% - 72px)">
+                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                         style="width: calc(100% - 72px)">
 
                     </div>
                 </div>
@@ -270,11 +307,13 @@
             </div>
             <div class="relative mb-6 last:mb-0">
                 <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
                     </svg>
                     <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]" style="width: calc(100% - 72px)">
+                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                         style="width: calc(100% - 72px)">
 
                     </div>
                 </div>
@@ -284,11 +323,13 @@
             </div>
             <div class="relative mb-6 last:mb-0">
                 <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
                     </svg>
                     <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]" style="width: calc(100% - 72px)">
+                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                         style="width: calc(100% - 72px)">
 
                     </div>
                 </div>
@@ -299,48 +340,48 @@
         </div>
 
 
-<!--        <div class="flex flex-col row-span-2 relative">-->
-<!--            <div class="flex items-center mb-10 last:mb-0">-->
-<!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
-<!--                    border-width: 0 3px 3px 0;-->
-<!--                    display: inline-block;-->
-<!--                    padding: 5px;">-->
-<!--                </div>-->
-<!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
-<!--            </div>-->
-<!--            <div class="flex items-center mb-10 last:mb-0">-->
-<!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
-<!--                    border-width: 0 3px 3px 0;-->
-<!--                    display: inline-block;-->
-<!--                    padding: 5px;">-->
-<!--                </div>-->
-<!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
-<!--            </div>-->
-<!--            <div class="flex items-center mb-10 last:mb-0">-->
-<!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
-<!--                    border-width: 0 3px 3px 0;-->
-<!--                    display: inline-block;-->
-<!--                    padding: 5px;">-->
-<!--                </div>-->
-<!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
-<!--            </div>-->
-<!--            <div class="flex items-center mb-10 last:mb-0">-->
-<!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
-<!--                    border-width: 0 3px 3px 0;-->
-<!--                    display: inline-block;-->
-<!--                    padding: 5px;">-->
-<!--                </div>-->
-<!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
-<!--            </div>-->
-<!--            <div class="flex items-center mb-10 last:mb-0">-->
-<!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
-<!--                    border-width: 0 3px 3px 0;-->
-<!--                    display: inline-block;-->
-<!--                    padding: 5px;">-->
-<!--                </div>-->
-<!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="flex flex-col row-span-2 relative">-->
+        <!--            <div class="flex items-center mb-10 last:mb-0">-->
+        <!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
+        <!--                    border-width: 0 3px 3px 0;-->
+        <!--                    display: inline-block;-->
+        <!--                    padding: 5px;">-->
+        <!--                </div>-->
+        <!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
+        <!--            </div>-->
+        <!--            <div class="flex items-center mb-10 last:mb-0">-->
+        <!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
+        <!--                    border-width: 0 3px 3px 0;-->
+        <!--                    display: inline-block;-->
+        <!--                    padding: 5px;">-->
+        <!--                </div>-->
+        <!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
+        <!--            </div>-->
+        <!--            <div class="flex items-center mb-10 last:mb-0">-->
+        <!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
+        <!--                    border-width: 0 3px 3px 0;-->
+        <!--                    display: inline-block;-->
+        <!--                    padding: 5px;">-->
+        <!--                </div>-->
+        <!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
+        <!--            </div>-->
+        <!--            <div class="flex items-center mb-10 last:mb-0">-->
+        <!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
+        <!--                    border-width: 0 3px 3px 0;-->
+        <!--                    display: inline-block;-->
+        <!--                    padding: 5px;">-->
+        <!--                </div>-->
+        <!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
+        <!--            </div>-->
+        <!--            <div class="flex items-center mb-10 last:mb-0">-->
+        <!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
+        <!--                    border-width: 0 3px 3px 0;-->
+        <!--                    display: inline-block;-->
+        <!--                    padding: 5px;">-->
+        <!--                </div>-->
+        <!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
+        <!--            </div>-->
+        <!--        </div>-->
     </div>
 </div>
 <!---->
@@ -540,7 +581,7 @@
             </div>
         </div>
         <div class="relative cursor-pointer">
-            <div  class="flex justify-center">
+            <div class="flex justify-center">
                 <img src="assets/projects_photo/image2.png">
             </div>
             <div class="absolute bottom-0 bg-[#8CADCB] text-white w-full p-6">
@@ -548,7 +589,7 @@
             </div>
         </div>
         <div class="relative cursor-pointer">
-            <div  class="flex justify-center">
+            <div class="flex justify-center">
                 <img src="assets/projects_photo/image3.png">
             </div>
             <div class="absolute bottom-0 bg-[#8CADCB] text-white w-full p-6">
@@ -562,6 +603,7 @@
             Посмотреть все
         </div>
     </div>
+
 </div>
 <!---->
 <div id="contact" class=" mt-10" style="
@@ -617,10 +659,24 @@
 </body>
 </html>
 <script>
+    let isMobileMenuOpen = false;
+
+    const toggleTopMenu = () => {
+        isMobileMenuOpen = !isMobileMenuOpen;
+        document.getElementById("top-menu").classList.toggle("h-[50px]");
+        document.getElementById("top-menu").classList.toggle("h-full");
+        document.getElementById("top-row").classList.toggle("mt-5");
+        document.getElementById("logo").classList.toggle("hidden");
+        document.getElementById("name").classList.toggle("hidden");
+        document.getElementById("links").classList.toggle("hidden");
+        document.getElementById("open-mobile-menu").classList.toggle("hidden");
+        document.getElementById("close-mobile-menu").classList.toggle("hidden");
+    }
     const pageTopOffset = 125;
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
+            isMobileMenuOpen && toggleTopMenu()
             const targetEl = document.querySelector(this.getAttribute('href'));
             const y = targetEl.getBoundingClientRect().top + window.pageYOffset - pageTopOffset;
             window.scrollTo({top: y, behavior: 'smooth'});
@@ -648,4 +704,7 @@
         controlsContainer: "#customize-controls",
         navPosition: "bottom"
     });
+
+
+    document.getElementById("menu-mobile").addEventListener("click", toggleTopMenu)
 </script>
