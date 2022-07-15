@@ -547,6 +547,109 @@
 <!---->
 <div id="projects" class="container px-5 mx-auto my-10 mb-20">
     <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">НАШИ ПРОЕКТЫ</div>
+    <!--Modal-->
+    <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
+        <div class="modal-overlay absolute w-full h-full bg-white opacity-95"></div>
+
+        <div class="modal-container fixed w-full h-full z-50 overflow-y-auto ">
+
+            <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-black text-sm z-50">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.414185" y="14.1421" width="20" height="2" rx="1" transform="rotate(-45 0.414185 14.1421)" fill="#2F70A6"/>
+                    <rect x="1.41418" y="0.142136" width="20" height="2" rx="1" transform="rotate(45 1.41418 0.142136)" fill="#2F70A6"/>
+                </svg>
+            </div>
+
+            <!-- Add margin if you want to see grey behind the modal-->
+            <div class="modal-content mx-auto h-auto text-left p-4 mt-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="md:row-span-2 min-h-fit order-none md:-order-1">
+                        <img src="assets/projects_photo/image1.png">
+                    </div>
+                    <div class="bg-[#8CADCB] flex items-center p-5 md:col-span-2 -order-1 md:order-none">
+                        <div class="text-white">
+                            ПОДЪЁМНО-ТРАНСПОРТНОЕ ОБОРУДОВАНИЕ
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        На базе ВятГУ создан и успешно функционирует Инжиниринговый центр
+                        (далее – ИЦ ВятГУ). На территории 8000 кв.м. собран квалифицированный
+                        инженерно-технический персонал, способный решать самые сложные задачи, запущен
+                        современный комплекс металлообрабатывающего оборудования.
+                        Мы
+                        создаем
+                        новые
+                        технологии,
+                        приборы
+                        и
+                        устройства
+                        для
+                        решения
+                        технологических
+                        проблем предприятий
+                        и
+                        организаций
+                        на
+                        основе
+                        результатов фундаментальных исследований ученых университета.
+                        Мы
+                        создаем
+                        новые
+                        технологии,
+                        приборы
+                        и
+                        устройства
+                        для
+                        решения
+                        технологических
+                        проблем предприятий
+                        и
+                        организаций
+                        на
+                        основе
+                        результатов фундаментальных исследований.</div>
+                    <div  class="md:col-span-3 row-span-3">
+                        На базе ВятГУ создан и успешно функционирует Инжиниринговый центр
+                        (далее – ИЦ ВятГУ). На территории 8000 кв.м. собран квалифицированный
+                        инженерно-технический персонал, способный решать самые сложные задачи, запущен
+                        современный комплекс металлообрабатывающего оборудования.
+                        Мы
+                        создаем
+                        новые
+                        технологии,
+                        приборы
+                        и
+                        устройства
+                        для
+                        решения
+                        технологических
+                        проблем предприятий
+                        и
+                        организаций
+                        на
+                        основе
+                        результатов фундаментальных исследований ученых университета.
+                        Мы
+                        создаем
+                        новые
+                        технологии,
+                        приборы
+                        и
+                        устройства
+                        для
+                        решения
+                        технологических
+                        проблем предприятий
+                        и
+                        организаций
+                        на
+                        основе
+                        результатов фундаментальных исследований.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="my-10 flex flex-wrap justify-center">
         <div class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-white bg-[#2F70A6] text-[11px] md:text-[14px]">
             все
@@ -571,7 +674,7 @@
         </div>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <div class="relative cursor-pointer">
+        <div class="relative cursor-pointer modal-open">
             <div class="flex justify-center">
                 <img src="assets/projects_photo/image1.png">
             </div>
@@ -579,7 +682,7 @@
                 ПОДЪЁМНО-ТРАНСПОРТНОЕ ОБОРУДОВАНИЕ
             </div>
         </div>
-        <div class="relative cursor-pointer">
+        <div class="relative cursor-pointer modal-open">
             <div class="flex justify-center">
                 <img src="assets/projects_photo/image2.png">
             </div>
@@ -587,7 +690,7 @@
                 ГИДРОНОЖНИЦЫ ДЛЯ РЕЗКИ АРМАТУРЫ МЕТАЛЛОКОНСТРУКЦИЙ
             </div>
         </div>
-        <div class="relative cursor-pointer">
+        <div class="relative cursor-pointer modal-open">
             <div class="flex justify-center">
                 <img src="assets/projects_photo/image3.png">
             </div>
@@ -706,4 +809,46 @@
 
 
     document.getElementById("menu-mobile").addEventListener("click", toggleTopMenu)
+</script>
+
+<script>
+    const openmodal = document.querySelectorAll('.modal-open')
+    for (let i = 0; i < openmodal.length; i++) {
+        openmodal[i].addEventListener('click', function(event){
+            event.preventDefault()
+            toggleModal()
+        })
+    }
+
+    const overlay = document.querySelector('.modal-overlay')
+    overlay.addEventListener('click', toggleModal)
+
+    const closemodal = document.querySelectorAll('.modal-close')
+    for (let i = 0; i < closemodal.length; i++) {
+        closemodal[i].addEventListener('click', toggleModal)
+    }
+
+    document.onkeydown = function(evt) {
+        evt = evt || window.event
+        let isEscape = false
+        if ("key" in evt) {
+            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+        } else {
+            isEscape = (evt.keyCode === 27)
+        }
+        if (isEscape && document.body.classList.contains('modal-active')) {
+            toggleModal()
+        }
+    };
+
+
+    function toggleModal () {
+        const body = document.querySelector('body')
+        const modal = document.querySelector('.modal')
+        modal.classList.toggle('opacity-0')
+        modal.classList.toggle('pointer-events-none')
+        body.classList.toggle('modal-active')
+    }
+
+
 </script>
