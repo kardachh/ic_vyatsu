@@ -1,8 +1,9 @@
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link href="./dist/output.css" rel="stylesheet">
@@ -12,753 +13,758 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <title>Инжиниринговый центр</title>
 </head>
+
 <body style="font-family: Montserrat, ui-monospace;">
 
-<div id="top-menu" class="bg-[#2F70A6] fixed top-0 left-0 container max-w-full z-50 px-5 xl:px-0">
-    <div id="top-row"
-         class="h-[50px] xl:h-[100px] flex flex-col xl:flex-row justify-between xl:items-center container mx-auto relative ">
-        <div class="flex items-center cursor-pointer w-fit" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-            <img id="logo" class="relative ml-[20px] mt-0 xl:mt-5 h-[60px] xl:h-auto" src="assets/logo_vyatsu.png"
-                 alt="vyatsu_logo"/>
-            <div id="name" class="hidden xl:block text-white text-[16px] xl:ml-[20px] font-bold">
-                ИНЖИНИРИНГОВЫЙ ЦЕНТР<br>КИРОВСКОЙ ОБЛАСТИ
+    <div id="top-menu" class="bg-[#2F70A6] fixed top-0 left-0 container max-w-full z-50 px-5 xl:px-0">
+        <div id="top-row"
+            class="h-[50px] xl:h-[100px] flex flex-col xl:flex-row justify-between xl:items-center container mx-auto relative ">
+            <div class="flex items-center cursor-pointer w-fit" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <img id="logo" class="relative ml-[20px] mt-0 xl:mt-5 h-[60px] xl:h-auto" src="assets/logo_vyatsu.png"
+                    alt="vyatsu_logo" />
+                <div id="name" class="hidden xl:block text-white text-[16px] xl:ml-[20px] font-bold">
+                    ИНЖИНИРИНГОВЫЙ ЦЕНТР<br>КИРОВСКОЙ ОБЛАСТИ
+                </div>
+            </div>
+            <div id="links"
+                class="hidden xl:flex items-center justify-between text-white xl:w-3/5 space-y-5 xl:space-y-0">
+                <div class="flex pt-10 xl:pt-0 order-last w-full xl:w-[200px]">
+                    <div class="flex border-b w-full">
+                        <input type="text" class="px-4 py-2 bg-transparent w-full ">
+                        <button class="flex items-center justify-center px-4">
+                            <svg class="w-6 h-6 text-gray-600" fill="#FFF" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div><a class="text-[13px]" href="#about">О нас</a></div>
+                <div><a class="text-[13px]" href="#capabilities">Возможности</a></div>
+                <div><a class="text-[13px]" href="#for-whom">Для кого</a></div>
+                <div><a class="text-[13px]" href="#interaction">Взаимодействие</a></div>
+                <div><a class="text-[13px]" href="#projects">Проекты</a></div>
+                <div><a class="text-[13px]" href="#contact">Контакты</a></div>
+
+
+            </div>
+            <div id="menu-mobile" class="absolute h-full right-[10px] xl:hidden cursor-pointer flex items-center">
+                <div id="open-mobile-menu" class="space-y-1">
+                    <div class="w-5 h-0.5 bg-[#D9D9D9]"></div>
+                    <div class="w-5 h-0.5 bg-[#D9D9D9]"></div>
+                    <div class="w-5 h-0.5 bg-[#D9D9D9]"></div>
+                </div>
+                <div id="close-mobile-menu" class="hidden">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.414185" y="14.1421" width="20" height="2" rx="1"
+                            transform="rotate(-45 0.414185 14.1421)" fill="#D9D9D9" />
+                        <rect x="1.41418" y="0.142136" width="20" height="2" rx="1"
+                            transform="rotate(45 1.41418 0.142136)" fill="#D9D9D9" />
+                    </svg>
+                </div>
             </div>
         </div>
-        <div id="links" class="hidden xl:flex items-center justify-between text-white xl:w-3/5 space-y-5 xl:space-y-0">
-            <div class="flex pt-10 xl:pt-0 order-last w-full xl:w-[200px]">
-                <div class="flex border-b w-full">
-                    <input type="text" class="px-4 py-2 bg-transparent w-full ">
-                    <button class="flex items-center justify-center px-4">
-                        <svg class="w-6 h-6 text-gray-600" fill="#FFF" xmlns="http://www.w3.org/2000/svg"
-                             viewBox="0 0 24 24">
-                            <path
-                                    d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/>
+    </div>
+
+    <div class="h-[50vh] min-h-[400px] flex flex-col justify-center items-center container px-5 mx-auto mt-[120px]">
+        <img src="assets/logo.svg" alt="logo" class="w-[30vw] max-w-[300px]" />
+        <div class="text-[24px] md:text-[40px] text-center font-[900] text-[#2F70A6] mt-5">ИНЖИНИРИНГОВЫЙ ЦЕНТР ВЯТГУ
+        </div>
+    </div>
+
+    <div id="about" class="container px-5 mx-auto my-10 mb-20">
+        <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">О НАС</div>
+        <div class="flex flex-col md:grid grid-cols-3 gap-4">
+            <div class="order-last md:order-none col-span-1 row-span-2 overflow-hidden bg-cover min-h-[200px]"
+                style="background-image: url('assets/image.png')">
+            </div>
+            <div class="col-span-2 leading-[36px] text-[16px]">
+                На базе ВятГУ создан и успешно функционирует Инжиниринговый центр (далее – ИЦ ВятГУ).
+                На территории 8000 кв.м. собран квалифицированный инженерно-технический персонал, способный решать самые
+                сложные задачи, запущен современный комплекс металлообрабатывающего оборудования.
+            </div>
+            <div class="col-span-2 leading-[36px] text-[16px]">
+                Мы создаем новые технологии, приборы и устройства для решения технологических проблем предприятий и
+                организаций на основе результатов фундаментальных исследований ученых университета.
+            </div>
+        </div>
+    </div>
+
+    <div id="capabilities" class="container px-5 mx-auto my-10 mb-20">
+        <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">НАШИ ВОЗМОЖНОСТИ</div>
+        <div class="flex flex-col-reverse md:flex-col">
+            <div class="relative">
+                <div class="flex justify-between items-center w-full absolute top-[50%]" id="customize-controls"
+                    aria-label="Carousel Navigation" tabindex="0">
+                    <div class="prev cursor-pointer" data-controls="prev" aria-controls="customize" tabindex="-1">
+                        <div class="origin-center rotate-[135deg]" style="border: solid #048974;
+                    border-width: 0 4px 4px 0;
+                    display: inline-block;
+                    padding: 10px;">
+                        </div>
+                    </div>
+                    <div class="next flex justify-end cursor-pointer" data-controls="next" aria-controls="customize"
+                        tabindex="-1">
+                        <div class="origin-center -rotate-45" style="border: solid #048974;
+                    border-width: 0 4px 4px 0;
+                    display: inline-block;
+                    padding: 10px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="px-[3rem] md:mb-10">
+                    <div data-tns-nav-position="bottom" class="mx-auto slider hidden md:block" id="">
+                        <div>
+                            <div class="flex md:grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[500px]">
+                                <div class="bg-gray-500 w-full"></div>
+                                <div class="bg-gray-500 w-full md:row-span-2"></div>
+                                <div class="bg-gray-500 w-full md:row-span-2"></div>
+                                <div class="bg-gray-500 w-full md:row-span-2"></div>
+                                <div class="bg-gray-500 w-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex md:grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[500px]">
+                                <div class="bg-red-500 w-full"></div>
+                                <div class="bg-red-500 w-full md:row-span-2"></div>
+                                <div class="bg-red-500 w-full md:row-span-2"></div>
+                                <div class="bg-red-500 w-full md:row-span-2"></div>
+                                <div class="bg-red-500 w-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="md:grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[500px]">
+                                <div class="bg-green-500 w-full"></div>
+                                <div class="bg-green-500 w-full md:row-span-2"></div>
+                                <div class="bg-green-500 w-full md:row-span-2"></div>
+                                <div class="bg-green-500 w-full md:row-span-2"></div>
+                                <div class="bg-green-500 w-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mx-auto sliderMobile md:hidden">
+                        <div class="w-[50px] h-[500px] bg-gray-500"></div>
+                        <div class="w-[50px] h-[500px] bg-red-500"></div>
+                        <div class="w-[50px] h-[500px] bg-green-500"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col row-span-2 mb-10 md:mb-0 ">
+                <div class="relative mb-6">
+                    <div class="relative">
+                        <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974" />
                         </svg>
-                    </button>
-                </div>
-            </div>
-            <div><a class="text-[13px]" href="#about">О нас</a></div>
-            <div><a class="text-[13px]" href="#capabilities">Возможности</a></div>
-            <div><a class="text-[13px]" href="#for-whom">Для кого</a></div>
-            <div><a class="text-[13px]" href="#interaction">Взаимодействие</a></div>
-            <div><a class="text-[13px]" href="#projects">Проекты</a></div>
-            <div><a class="text-[13px]" href="#contact">Контакты</a></div>
+                        <div
+                            class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                        </div>
+                        <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                            style="width: calc(100% - 72px)">
 
-
-        </div>
-        <div id="menu-mobile" class="absolute h-full right-[10px] xl:hidden cursor-pointer flex items-center">
-            <div id="open-mobile-menu" class="space-y-1">
-                <div class="w-5 h-0.5 bg-[#D9D9D9]"></div>
-                <div class="w-5 h-0.5 bg-[#D9D9D9]"></div>
-                <div class="w-5 h-0.5 bg-[#D9D9D9]"></div>
-            </div>
-            <div id="close-mobile-menu" class="hidden">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.414185" y="14.1421" width="20" height="2" rx="1" transform="rotate(-45 0.414185 14.1421)" fill="#D9D9D9"/>
-                    <rect x="1.41418" y="0.142136" width="20" height="2" rx="1" transform="rotate(45 1.41418 0.142136)" fill="#D9D9D9"/>
-                </svg>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="h-[50vh] min-h-[400px] flex flex-col justify-center items-center container px-5 mx-auto mt-[120px]">
-    <img src="assets/logo.svg" alt="logo" class="w-[30vw] max-w-[300px]"/>
-    <div class="text-[24px] md:text-[40px] text-center font-[900] text-[#2F70A6] mt-5">ИНЖИНИРИНГОВЫЙ ЦЕНТР ВЯТГУ</div>
-</div>
-
-<div id="about" class="container px-5 mx-auto my-10 mb-20">
-    <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">О НАС</div>
-    <div class="flex flex-col md:grid grid-cols-3 gap-4">
-        <div class="order-last md:order-none col-span-1 row-span-2 overflow-hidden bg-cover min-h-[200px]"
-             style="background-image: url('assets/image.png')">
-        </div>
-        <div class="col-span-2 leading-[36px] text-[16px]">
-            На базе ВятГУ создан и успешно функционирует Инжиниринговый центр (далее – ИЦ ВятГУ).
-            На территории 8000 кв.м. собран квалифицированный инженерно-технический персонал, способный решать самые
-            сложные задачи, запущен современный комплекс металлообрабатывающего оборудования.
-        </div>
-        <div class="col-span-2 leading-[36px] text-[16px]">
-            Мы создаем новые технологии, приборы и устройства для решения технологических проблем предприятий и
-            организаций на основе результатов фундаментальных исследований ученых университета.
-        </div>
-    </div>
-</div>
-
-<div id="capabilities" class="container px-5 mx-auto my-10 mb-20">
-    <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">НАШИ ВОЗМОЖНОСТИ</div>
-    <div class="flex flex-col-reverse md:flex-col">
-        <div class="relative">
-            <div class="flex justify-between items-center w-full absolute top-[50%]" id="customize-controls"
-                 aria-label="Carousel Navigation" tabindex="0">
-                <div class="prev cursor-pointer" data-controls="prev" aria-controls="customize" tabindex="-1">
-                    <div class="origin-center rotate-[135deg]" style="border: solid #048974;
-                    border-width: 0 4px 4px 0;
-                    display: inline-block;
-                    padding: 10px;">
-                    </div>
-                </div>
-                <div class="next flex justify-end cursor-pointer" data-controls="next" aria-controls="customize"
-                     tabindex="-1">
-                    <div class="origin-center -rotate-45" style="border: solid #048974;
-                    border-width: 0 4px 4px 0;
-                    display: inline-block;
-                    padding: 10px;">
-                    </div>
-                </div>
-            </div>
-            <div class="px-[3rem] md:mb-10">
-                <div class="mx-auto slider hidden md:block" id="">
-                    <div>
-                        <div class="flex md:grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[500px]">
-                            <div class="bg-gray-500 w-full"></div>
-                            <div class="bg-gray-500 w-full md:row-span-2"></div>
-                            <div class="bg-gray-500 w-full md:row-span-2"></div>
-                            <div class="bg-gray-500 w-full md:row-span-2"></div>
-                            <div class="bg-gray-500 w-full"></div>
                         </div>
                     </div>
-                    <div>
-                        <div class="flex md:grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[500px]">
-                            <div class="bg-red-500 w-full"></div>
-                            <div class="bg-red-500 w-full md:row-span-2"></div>
-                            <div class="bg-red-500 w-full md:row-span-2"></div>
-                            <div class="bg-red-500 w-full md:row-span-2"></div>
-                            <div class="bg-red-500 w-full"></div>
+                    <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
+                        Реализация полного цикла технологического обновления предприятия;
+                    </div>
+                </div>
+                <div class="relative mb-6">
+                    <div class="relative">
+                        <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974" />
+                        </svg>
+                        <div
+                            class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                        </div>
+                        <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                            style="width: calc(100% - 72px)">
                         </div>
                     </div>
-                    <div>
-                        <div class="md:grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[500px]">
-                            <div class="bg-green-500 w-full"></div>
-                            <div class="bg-green-500 w-full md:row-span-2"></div>
-                            <div class="bg-green-500 w-full md:row-span-2"></div>
-                            <div class="bg-green-500 w-full md:row-span-2"></div>
-                            <div class="bg-green-500 w-full"></div>
+                    <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
+                        Проектирование промышленных станов;
+                    </div>
+                </div>
+                <div class="relative mb-6 ">
+                    <div class="relative">
+                        <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974" />
+                        </svg>
+                        <div
+                            class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                        </div>
+                        <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                            style="width: calc(100% - 72px)">
+
                         </div>
                     </div>
-                </div>
-                <div class="mx-auto sliderMobile md:hidden">
-                    <div class="w-[50px] h-[500px] bg-gray-500"></div>
-                    <div class="w-[50px] h-[500px] bg-red-500"></div>
-                    <div class="w-[50px] h-[500px] bg-green-500"></div>
-                </div>
-            </div>
-        </div>
-        <div class="flex flex-col row-span-2 mb-10 md:mb-0 ">
-            <div class="relative mb-6">
-                <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
-                    </svg>
-                    <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
-                         style="width: calc(100% - 72px)">
-
+                    <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
+                        Проектирование и создание технологических линий производств;
                     </div>
                 </div>
-                <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
-                    Реализация полного цикла технологического обновления предприятия;
-                </div>
-            </div>
-            <div class="relative mb-6">
-                <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
-                    </svg>
-                    <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
-                         style="width: calc(100% - 72px)">
+                <div class="relative mb-6 ">
+                    <div class="relative">
+                        <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974" />
+                        </svg>
+                        <div
+                            class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                        </div>
+                        <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                            style="width: calc(100% - 72px)">
+
+                        </div>
+                    </div>
+                    <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
+                        Проектирование и создание технологических линий производств;
                     </div>
                 </div>
-                <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
-                    Проектирование промышленных станов;
-                </div>
-            </div>
-            <div class="relative mb-6 ">
-                <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
-                    </svg>
-                    <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
-                         style="width: calc(100% - 72px)">
+                <div class="relative mb-6 ">
+                    <div class="relative">
+                        <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974" />
+                        </svg>
+                        <div
+                            class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                        </div>
+                        <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                            style="width: calc(100% - 72px)">
 
+                        </div>
+                    </div>
+                    <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
+                        Реализация полного цикла технологического обновления предприятия;
                     </div>
                 </div>
-                <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
-                    Проектирование и создание технологических линий производств;
-                </div>
-            </div>
-            <div class="relative mb-6 ">
-                <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
-                    </svg>
-                    <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
-                         style="width: calc(100% - 72px)">
+                <div class="relative mb-6 ">
+                    <div class="relative">
+                        <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974" />
+                        </svg>
+                        <div
+                            class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                        </div>
+                        <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                            style="width: calc(100% - 72px)">
 
+                        </div>
+                    </div>
+                    <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
+                        Проектирование промышленных станов;
                     </div>
                 </div>
-                <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
-                    Проектирование и создание технологических линий производств;
-                </div>
-            </div>
-            <div class="relative mb-6 ">
-                <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
-                    </svg>
-                    <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
-                         style="width: calc(100% - 72px)">
+                <div class="relative mb-6 ">
+                    <div class="relative">
+                        <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974" />
+                        </svg>
+                        <div
+                            class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                        </div>
+                        <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                            style="width: calc(100% - 72px)">
 
+                        </div>
+                    </div>
+                    <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
+                        Проектирование и создание технологических линий производств;
                     </div>
                 </div>
-                <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
-                    Реализация полного цикла технологического обновления предприятия;
-                </div>
-            </div>
-            <div class="relative mb-6 ">
-                <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
-                    </svg>
-                    <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
-                         style="width: calc(100% - 72px)">
+                <div class="relative mb-6 ">
+                    <div class="relative">
+                        <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974" />
+                        </svg>
+                        <div
+                            class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                        </div>
+                        <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                            style="width: calc(100% - 72px)">
 
+                        </div>
+                    </div>
+                    <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
+                        Проектирование и создание технологических линий производств;
                     </div>
                 </div>
-                <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
-                    Проектирование промышленных станов;
-                </div>
-            </div>
-            <div class="relative mb-6 ">
-                <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
-                    </svg>
-                    <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
-                         style="width: calc(100% - 72px)">
+                <div class="relative mb-6 ">
+                    <div class="relative">
+                        <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974" />
+                        </svg>
+                        <div
+                            class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                        </div>
+                        <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                            style="width: calc(100% - 72px)">
 
+                        </div>
+                    </div>
+                    <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
+                        Реализация полного цикла технологического обновления предприятия;
                     </div>
                 </div>
-                <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
-                    Проектирование и создание технологических линий производств;
-                </div>
-            </div>
-            <div class="relative mb-6 ">
-                <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
-                    </svg>
-                    <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
-                         style="width: calc(100% - 72px)">
+                <div class="relative mb-6 ">
+                    <div class="relative">
+                        <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974" />
+                        </svg>
+                        <div
+                            class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                        </div>
+                        <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                            style="width: calc(100% - 72px)">
 
+                        </div>
+                    </div>
+                    <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
+                        Проектирование промышленных станов;
                     </div>
                 </div>
-                <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
-                    Проектирование и создание технологических линий производств;
-                </div>
-            </div>
-            <div class="relative mb-6 ">
-                <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
-                    </svg>
-                    <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
-                         style="width: calc(100% - 72px)">
+                <div class="relative mb-6 ">
+                    <div class="relative">
+                        <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974" />
+                        </svg>
+                        <div
+                            class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                        </div>
+                        <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                            style="width: calc(100% - 72px)">
 
+                        </div>
+                    </div>
+                    <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
+                        Проектирование и создание технологических линий производств;
                     </div>
                 </div>
-                <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
-                    Реализация полного цикла технологического обновления предприятия;
-                </div>
-            </div>
-            <div class="relative mb-6 ">
-                <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
-                    </svg>
-                    <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
-                         style="width: calc(100% - 72px)">
+                <div class="relative mb-6 ">
+                    <div class="relative">
+                        <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974" />
+                        </svg>
+                        <div
+                            class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                        </div>
+                        <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
+                            style="width: calc(100% - 72px)">
 
+                        </div>
                     </div>
-                </div>
-                <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
-                    Проектирование промышленных станов;
-                </div>
-            </div>
-            <div class="relative mb-6 ">
-                <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
-                    </svg>
-                    <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
-                         style="width: calc(100% - 72px)">
-
+                    <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
+                        Проектирование и создание технологических линий производств;
                     </div>
-                </div>
-                <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
-                    Проектирование и создание технологических линий производств;
-                </div>
-            </div>
-            <div class="relative mb-6 ">
-                <div class="relative">
-                    <svg class="absolute z-20" width="59" height="25" viewBox="0 0 59 25" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0.000244141H43.1707L59 12.5002L43.1707 25.0002H0V0.000244141Z" fill="#048974"/>
-                    </svg>
-                    <div class="absolute top-[11px] left-[39px] w-[38px] bg-[#C4C4C4] border border-[#C4C4C4] rotate-[-38deg] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"></div>
-                    <div class="absolute bg-[#C4C4C4] border border-[#C4C4C4] right-0 top-[-0.5] drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]"
-                         style="width: calc(100% - 72px)">
-
-                    </div>
-                </div>
-                <div class="relative ml-[75px] text-[12px] md:text-[14px] top-[10px]">
-                    Проектирование и создание технологических линий производств;
-                </div>
-            </div>
-        </div>
-
-
-        <!--        <div class="flex flex-col row-span-2 relative">-->
-        <!--            <div class="flex items-center mb-10 last:mb-0">-->
-        <!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
-        <!--                    border-width: 0 3px 3px 0;-->
-        <!--                    display: inline-block;-->
-        <!--                    padding: 5px;">-->
-        <!--                </div>-->
-        <!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
-        <!--            </div>-->
-        <!--            <div class="flex items-center mb-10 last:mb-0">-->
-        <!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
-        <!--                    border-width: 0 3px 3px 0;-->
-        <!--                    display: inline-block;-->
-        <!--                    padding: 5px;">-->
-        <!--                </div>-->
-        <!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
-        <!--            </div>-->
-        <!--            <div class="flex items-center mb-10 last:mb-0">-->
-        <!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
-        <!--                    border-width: 0 3px 3px 0;-->
-        <!--                    display: inline-block;-->
-        <!--                    padding: 5px;">-->
-        <!--                </div>-->
-        <!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
-        <!--            </div>-->
-        <!--            <div class="flex items-center mb-10 last:mb-0">-->
-        <!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
-        <!--                    border-width: 0 3px 3px 0;-->
-        <!--                    display: inline-block;-->
-        <!--                    padding: 5px;">-->
-        <!--                </div>-->
-        <!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
-        <!--            </div>-->
-        <!--            <div class="flex items-center mb-10 last:mb-0">-->
-        <!--                <div class="origin-center -rotate-45 mr-10 md:mx-10" style="border: solid #048974;-->
-        <!--                    border-width: 0 3px 3px 0;-->
-        <!--                    display: inline-block;-->
-        <!--                    padding: 5px;">-->
-        <!--                </div>-->
-        <!--                <div>Реализация полного цикла технологического обновления предприятия;</div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-    </div>
-</div>
-<!---->
-<div id="for-whom" class="container px-5 mx-auto my-10 mb-20">
-    <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">ДЛЯ КОГО</div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="flex flex-col justify-center items-center bg-gray-100 rounded">
-            <div class="w-[70] h-[70] bg-gray-500 rounded my-10">
-                <!--                Иконка-->
-            </div>
-            <div class="md:text-2xl font-bold">
-                Название
-            </div>
-            <div class="w-[70%] my-5">
-                <ul class="list-disc">
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                </ul>
-                <ol class="list-decimal">
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                </ol>
-            </div>
-        </div>
-        <div class="flex flex-col justify-center items-center bg-gray-100 rounded">
-            <div class="w-[70] h-[70] bg-gray-500 rounded my-10">
-                <!--                Иконка-->
-            </div>
-            <div class="md:text-2xl font-bold">
-                Название
-            </div>
-            <div class="w-[70%] my-5">
-                <ul class="list-disc">
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                </ul>
-                <ol class="list-decimal">
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                </ol>
-            </div>
-        </div>
-        <div class="flex flex-col justify-center items-center bg-gray-100 rounded">
-            <div class="w-[70] h-[70] bg-gray-500 rounded my-10">
-                <!--                Иконка-->
-            </div>
-            <div class="md:text-2xl font-bold">
-                Название
-            </div>
-            <div class="w-[70%] my-5">
-                <ul class="list-disc">
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                </ul>
-                <ol class="list-decimal">
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                    <li>Текст текст текст текст текст</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-</div>
-<!---->
-<div id="interaction" class="container px-5 mx-auto my-10 mb-20">
-    <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">ПОРЯДОК ВЗАИМОДЕЙСТВИЯ</div>
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
-        <div class="rounded bg-gray-100 p-5 flex">
-            <div class="flex flex-col items-center">
-                <div class="rounded bg-white h-[50px] w-[50px] text-[#048974] text-3xl flex justify-center items-center font-bold">
-                    1
-                </div>
-                <div class="relative w-[2px] h-[50px] mt-3"
-                     style="background: linear-gradient(180deg, #048974 0%, rgba(196, 196, 196, 0) 100%, rgba(4, 137, 116, 0) 100%);"></div>
-            </div>
-            <div class="ml-5">
-                <div class=" mt-3 font-bold text-xl">
-                    Название
-                </div>
-                <div>
-                    Текст текст текст
-                    текст текст текст
-                </div>
-            </div>
-        </div>
-        <div class="rounded bg-gray-100 p-5 flex">
-            <div class="flex flex-col items-center">
-                <div class="rounded bg-white h-[50px] w-[50px] text-[#048974] text-3xl flex justify-center items-center font-bold">
-                    2
-                </div>
-                <div class="relative w-[2px] h-[50px] mt-3"
-                     style="background: linear-gradient(180deg, #048974 0%, rgba(196, 196, 196, 0) 100%, rgba(4, 137, 116, 0) 100%);"></div>
-            </div>
-            <div class="ml-5">
-                <div class=" mt-3 font-bold text-xl">
-                    Название
-                </div>
-                <div>
-                    Текст текст текст
-                    текст текст текст
-                </div>
-            </div>
-        </div>
-        <div class="rounded bg-gray-100 p-5 flex">
-            <div class="flex flex-col items-center">
-                <div class="rounded bg-white h-[50px] w-[50px] text-[#048974] text-3xl flex justify-center items-center font-bold">
-                    3
-                </div>
-                <div class="relative w-[2px] h-[50px] mt-3"
-                     style="background: linear-gradient(180deg, #048974 0%, rgba(196, 196, 196, 0) 100%, rgba(4, 137, 116, 0) 100%);"></div>
-            </div>
-            <div class="ml-5">
-                <div class=" mt-3 font-bold text-xl">
-                    Название
-                </div>
-                <div>
-                    Текст текст текст
-                    текст текст текст
-                </div>
-            </div>
-        </div>
-        <div class="rounded bg-gray-100 p-5 flex">
-            <div class="flex flex-col items-center">
-                <div class="rounded bg-white h-[50px] w-[50px] text-[#048974] text-3xl flex justify-center items-center font-bold">
-                    4
-                </div>
-                <div class="relative w-[2px] h-[50px] mt-3"
-                     style="background: linear-gradient(180deg, #048974 0%, rgba(196, 196, 196, 0) 100%, rgba(4, 137, 116, 0) 100%);"></div>
-            </div>
-            <div class="ml-5">
-                <div class=" mt-3 font-bold text-xl">
-                    Название
-                </div>
-                <div>
-                    Текст текст текст
-                    текст текст текст
                 </div>
             </div>
         </div>
     </div>
-    <div class="my-10 h-[61px] bg-[#2F70A6] flex justify-center items-center md:max-w-[370px] md:w-1/2 mx-auto cursor-pointer">
-        <div class="text-white font-bold">
-            Написать
+    <!---->
+    <div id="for-whom" class="container px-5 mx-auto my-10 mb-20">
+        <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">ДЛЯ КОГО</div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="flex flex-col justify-center items-center bg-gray-100 rounded">
+                <div class="w-[70] h-[70] bg-gray-500 rounded my-10">
+                    <!--                Иконка-->
+                </div>
+                <div class="md:text-2xl font-bold">
+                    Название
+                </div>
+                <div class="w-[70%] my-5">
+                    <ul class="list-disc">
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                    </ul>
+                    <ol class="list-decimal">
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center bg-gray-100 rounded">
+                <div class="w-[70] h-[70] bg-gray-500 rounded my-10">
+                    <!--                Иконка-->
+                </div>
+                <div class="md:text-2xl font-bold">
+                    Название
+                </div>
+                <div class="w-[70%] my-5">
+                    <ul class="list-disc">
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                    </ul>
+                    <ol class="list-decimal">
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center bg-gray-100 rounded">
+                <div class="w-[70] h-[70] bg-gray-500 rounded my-10">
+                    <!--                Иконка-->
+                </div>
+                <div class="md:text-2xl font-bold">
+                    Название
+                </div>
+                <div class="w-[70%] my-5">
+                    <ul class="list-disc">
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                    </ul>
+                    <ol class="list-decimal">
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                        <li>Текст текст текст текст текст</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<!---->
-<div id="projects" class="container px-5 mx-auto my-10 mb-20">
-    <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">НАШИ ПРОЕКТЫ</div>
-    <!--Modal-->
-    <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
-        <div class="modal-overlay absolute w-full h-full bg-gray-300 opacity-80"></div>
-
-        <div class="modal-container w-full h-full md:max-h-[90%] md:h-auto md:w-[70%] fixed z-50 overflow-y-auto rounded-xl bg-white">
-
-            <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-black text-sm z-50">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.414185" y="14.1421" width="20" height="2" rx="1" transform="rotate(-45 0.414185 14.1421)" fill="#2F70A6"/>
-                    <rect x="1.41418" y="0.142136" width="20" height="2" rx="1" transform="rotate(45 1.41418 0.142136)" fill="#2F70A6"/>
-                </svg>
-            </div>
-
-            <!-- Add margin if you want to see grey behind the modal-->
-            <div class="modal-content mx-auto h-auto text-left p-7 mt-10">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="md:row-span-2 min-h-fit order-none md:-order-1">
-                        <img src="assets/projects_photo/image1.png">
+    <!---->
+    <div id="interaction" class="container px-5 mx-auto my-10 mb-20">
+        <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">ПОРЯДОК ВЗАИМОДЕЙСТВИЯ</div>
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <div class="rounded bg-gray-100 p-5 flex">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="rounded bg-white h-[50px] w-[50px] text-[#048974] text-3xl flex justify-center items-center font-bold">
+                        1
                     </div>
-                    <div class="bg-[#8CADCB] flex items-center p-5 md:col-span-2 -order-1 md:order-none">
+                    <div class="relative w-[2px] h-[50px] mt-3"
+                        style="background: linear-gradient(180deg, #048974 0%, rgba(196, 196, 196, 0) 100%, rgba(4, 137, 116, 0) 100%);">
+                    </div>
+                </div>
+                <div class="ml-5">
+                    <div class=" mt-3 font-bold text-xl">
+                        Название
+                    </div>
+                    <div>
+                        Текст текст текст
+                        текст текст текст
+                    </div>
+                </div>
+            </div>
+            <div class="rounded bg-gray-100 p-5 flex">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="rounded bg-white h-[50px] w-[50px] text-[#048974] text-3xl flex justify-center items-center font-bold">
+                        2
+                    </div>
+                    <div class="relative w-[2px] h-[50px] mt-3"
+                        style="background: linear-gradient(180deg, #048974 0%, rgba(196, 196, 196, 0) 100%, rgba(4, 137, 116, 0) 100%);">
+                    </div>
+                </div>
+                <div class="ml-5">
+                    <div class=" mt-3 font-bold text-xl">
+                        Название
+                    </div>
+                    <div>
+                        Текст текст текст
+                        текст текст текст
+                    </div>
+                </div>
+            </div>
+            <div class="rounded bg-gray-100 p-5 flex">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="rounded bg-white h-[50px] w-[50px] text-[#048974] text-3xl flex justify-center items-center font-bold">
+                        3
+                    </div>
+                    <div class="relative w-[2px] h-[50px] mt-3"
+                        style="background: linear-gradient(180deg, #048974 0%, rgba(196, 196, 196, 0) 100%, rgba(4, 137, 116, 0) 100%);">
+                    </div>
+                </div>
+                <div class="ml-5">
+                    <div class=" mt-3 font-bold text-xl">
+                        Название
+                    </div>
+                    <div>
+                        Текст текст текст
+                        текст текст текст
+                    </div>
+                </div>
+            </div>
+            <div class="rounded bg-gray-100 p-5 flex">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="rounded bg-white h-[50px] w-[50px] text-[#048974] text-3xl flex justify-center items-center font-bold">
+                        4
+                    </div>
+                    <div class="relative w-[2px] h-[50px] mt-3"
+                        style="background: linear-gradient(180deg, #048974 0%, rgba(196, 196, 196, 0) 100%, rgba(4, 137, 116, 0) 100%);">
+                    </div>
+                </div>
+                <div class="ml-5">
+                    <div class=" mt-3 font-bold text-xl">
+                        Название
+                    </div>
+                    <div>
+                        Текст текст текст
+                        текст текст текст
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="my-10 h-[61px] bg-[#2F70A6] flex justify-center items-center md:max-w-[370px] md:w-1/2 mx-auto cursor-pointer">
+            <div class="text-white font-bold">
+                Написать
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div id="projects" class="container px-5 mx-auto my-10 mb-20">
+        <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">НАШИ ПРОЕКТЫ</div>
+        <!--Modal-->
+        <div
+            class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
+            <div class="modal-overlay absolute w-full h-full bg-gray-300 opacity-80"></div>
+
+            <div
+                class="modal-container w-full h-full md:max-h-[90%] md:h-auto md:w-[70%] fixed z-50 overflow-y-auto bg-white">
+
+                <div class="bg-[#8CADCB] flex justify-between items-center">
+                    <div class="flex items-center p-5 -order-1 md:order-none">
                         <div class="text-white text-sm lg:text-base">
-                            ПОДЪЁМНО-ТРАНСПОРТНОЕ ОБОРУДОВАНИЕ
+                            ПОДЪЁМНО-ТРАНСПОРТНОЕОБОРУДОВАНИЕ
                         </div>
                     </div>
-                    <div class="md:col-span-2 text-sm lg:text-base">
-                        На базе ВятГУ создан и успешно функционирует Инжиниринговый центр
-                        (далее – ИЦ ВятГУ). На территории 8000 кв.м. собран квалифицированный
-                        инженерно-технический персонал, способный решать самые сложные задачи, запущен
-                        современный комплекс металлообрабатывающего оборудования.
-                        Мы
-                        создаем
-                        новые
-                        технологии,
-                        приборы
-                        и
-                        устройства
-                        для
-                        решения
-                        технологических
-                        проблем предприятий
-                        и
-                        организаций
-                        на
-                        основе
-                        результатов фундаментальных исследований ученых университета.
-                        Мы
-                        создаем
-                        новые
-                        технологии,
-                        приборы
-                        и
-                        устройства
-                        для
-                        решения
-                        технологических
-                        проблем предприятий
-                        и
-                        организаций
-                        на
-                        основе
-                        результатов фундаментальных исследований.</div>
-                    <div  class="md:col-span-3 row-span-3 text-sm lg:text-base">
-                        На базе ВятГУ создан и успешно функционирует Инжиниринговый центр
-                        (далее – ИЦ ВятГУ). На территории 8000 кв.м. собран квалифицированный
-                        инженерно-технический персонал, способный решать самые сложные задачи, запущен
-                        современный комплекс металлообрабатывающего оборудования.
-                        Мы
-                        создаем
-                        новые
-                        технологии,
-                        приборы
-                        и
-                        устройства
-                        для
-                        решения
-                        технологических
-                        проблем предприятий
-                        и
-                        организаций
-                        на
-                        основе
-                        результатов фундаментальных исследований ученых университета.
-                        Мы
-                        создаем
-                        новые
-                        технологии,
-                        приборы
-                        и
-                        устройства
-                        для
-                        решения
-                        технологических
-                        проблем предприятий
-                        и
-                        организаций
-                        на
-                        основе
-                        результатов фундаментальных исследований.
+                    <div class="modal-close cursor-pointer flex flex-col items-center mr-6 text-black text-sm z-50">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.414185" y="14.1421" width="20" height="2" rx="1"
+                                transform="rotate(-45 0.414185 14.1421)" fill="#FFF" />
+                            <rect x="1.41418" y="0.142136" width="20" height="2" rx="1"
+                                transform="rotate(45 1.41418 0.142136)" fill="#FFF" />
+                        </svg>
+                    </div>
+                </div>
+
+
+
+                <!-- Add margin if you want to see grey behind the modal-->
+                <div class="modal-content mx-auto h-auto text-left p-7">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="flex justify-center items-center">
+                            <div class="relative flex justify-center items-center">
+                                <div class="flex justify-between items-center w-full absolute top-[50%]"
+                                    id="customize-controls-modal" aria-label="Carousel Navigation" tabindex="0">
+                                    <div class="prev cursor-pointer" data-controls="prev" aria-controls="customize"
+                                        tabindex="-1">
+                                        <div class="origin-center rotate-[135deg]" style="border: solid #048974;
+                                    border-width: 0 4px 4px 0;
+                                    display: inline-block;
+                                    padding: 5px;">
+                                        </div>
+                                    </div>
+                                    <div class="next flex justify-end cursor-pointer" data-controls="next"
+                                        aria-controls="customize" tabindex="-1">
+                                        <div class="origin-center -rotate-45" style="border: solid #048974;
+                                    border-width: 0 4px 4px 0;
+                                    display: inline-block;
+                                    padding: 5px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-[85%]">
+                                    <div class="order-none md:-order-1 mx-auto sliderModal">
+                                        <img class="" src="assets/projects_photo/image1.png">
+                                        <img src="assets/projects_photo/image2.png">
+                                        <img class="" src="assets/projects_photo/image3.png">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="text-sm lg:text-base row-span-2 md:col-span-2">
+                            На базе ВятГУ создан и успешно функционирует Инжиниринговый центр
+                            (далее – ИЦ ВятГУ). На территории 8000 кв.м. собран квалифицированный
+                            инженерно-технический персонал, способный решать самые сложные задачи, запущен
+                            современный комплекс металлообрабатывающего оборудования.
+                            Мы
+                            создаем
+                            новые
+                            технологии,
+                            приборы
+                            и
+                            устройства
+                            для
+                            решения
+                            технологических
+                            проблем предприятий
+                            и
+                            организаций
+                            на
+                            основе
+                            результатов фундаментальных исследований ученых университета.
+                            Мы
+                            создаем
+                            новые
+                            технологии,
+                            приборы
+                            и
+                            устройства
+                            для
+                            решения
+                            технологических
+                            проблем предприятий
+                            и
+                            организаций
+                            на
+                            основе
+                            результатов фундаментальных исследований.
+                            
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="my-10 flex flex-wrap justify-center">
-        <div class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-white bg-[#2F70A6] text-[11px] md:text-[14px]">
-            все
-        </div>
-        <div class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-[#2F70A6]  text-[11px] md:text-[14px]">
-            ДЕРЕВООБРАБОТКА
-        </div>
-        <div class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-[#2F70A6]  text-[11px] md:text-[14px]">
-            МЕТАЛЛООБРАБОТКА
-        </div>
-        <div class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-[#2F70A6]  text-[11px] md:text-[14px]">
-            ПРОИЗВОДСТВО
-        </div>
-        <div class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-[#2F70A6]  text-[11px] md:text-[14px]">
-            ЭЛЕКТРОМОТОРЫ, ЭЛЕКТРОПРИВОДЫ
-        </div>
-        <div class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-[#2F70A6]  text-[11px] md:text-[14px]">
-            ПИЩЕВАЯ И МОЛОЧНАЯ ПРОМЫШЛЕННОСТЬ
-        </div>
-        <div class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-[#2F70A6]  text-[11px] md:text-[14px]">
-            ДРУГОЕ
-        </div>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <div class="relative cursor-pointer modal-open">
-            <div class="flex justify-center">
-                <img src="assets/projects_photo/image1.png">
+        <div class="my-10 flex flex-wrap justify-center">
+            <div
+                class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-white bg-[#2F70A6] text-[11px] md:text-[14px]">
+                все
             </div>
-            <div class="absolute bottom-0 bg-[#8CADCB] text-white w-full p-6">
-                ПОДЪЁМНО-ТРАНСПОРТНОЕ ОБОРУДОВАНИЕ
+            <div
+                class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-[#2F70A6]  text-[11px] md:text-[14px]">
+                ДЕРЕВООБРАБОТКА
+            </div>
+            <div
+                class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-[#2F70A6]  text-[11px] md:text-[14px]">
+                МЕТАЛЛООБРАБОТКА
+            </div>
+            <div
+                class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-[#2F70A6]  text-[11px] md:text-[14px]">
+                ПРОИЗВОДСТВО
+            </div>
+            <div
+                class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-[#2F70A6]  text-[11px] md:text-[14px]">
+                ЭЛЕКТРОМОТОРЫ, ЭЛЕКТРОПРИВОДЫ
+            </div>
+            <div
+                class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-[#2F70A6]  text-[11px] md:text-[14px]">
+                ПИЩЕВАЯ И МОЛОЧНАЯ ПРОМЫШЛЕННОСТЬ
+            </div>
+            <div
+                class="uppercase cursor-pointer m-2 md:m-5 px-5 py-3 border border-2 border-[#2F70A6] font-bold text-[#2F70A6]  text-[11px] md:text-[14px]">
+                ДРУГОЕ
             </div>
         </div>
-        <div class="relative cursor-pointer modal-open">
-            <div class="flex justify-center">
-                <img src="assets/projects_photo/image2.png">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div class="relative cursor-pointer modal-open">
+                <div class="flex justify-center">
+                    <img src="assets/projects_photo/image1.png">
+                </div>
+                <div class="absolute bottom-0 bg-[#8CADCB] text-white w-full p-6">
+                    ПОДЪЁМНО-ТРАНСПОРТНОЕ ОБОРУДОВАНИЕ
+                </div>
             </div>
-            <div class="absolute bottom-0 bg-[#8CADCB] text-white w-full p-6">
-                ГИДРОНОЖНИЦЫ ДЛЯ РЕЗКИ АРМАТУРЫ МЕТАЛЛОКОНСТРУКЦИЙ
+            <div class="relative cursor-pointer modal-open">
+                <div class="flex justify-center">
+                    <img src="assets/projects_photo/image2.png">
+                </div>
+                <div class="absolute bottom-0 bg-[#8CADCB] text-white w-full p-6">
+                    ГИДРОНОЖНИЦЫ ДЛЯ РЕЗКИ АРМАТУРЫ МЕТАЛЛОКОНСТРУКЦИЙ
+                </div>
+            </div>
+            <div class="relative cursor-pointer modal-open">
+                <div class="flex justify-center">
+                    <img src="assets/projects_photo/image3.png">
+                </div>
+                <div class="absolute bottom-0 bg-[#8CADCB] text-white w-full p-6">
+                    КОМПЛЕКС ДЛЯ ПЕРФОРАЦИИ
+                    И НАВИВКИ ОСНОВНОГО НЕСУЩЕГО
+                </div>
             </div>
         </div>
-        <div class="relative cursor-pointer modal-open">
-            <div class="flex justify-center">
-                <img src="assets/projects_photo/image3.png">
-            </div>
-            <div class="absolute bottom-0 bg-[#8CADCB] text-white w-full p-6">
-                КОМПЛЕКС ДЛЯ ПЕРФОРАЦИИ
-                И НАВИВКИ ОСНОВНОГО НЕСУЩЕГО
+        <div
+            class="my-10 h-[61px] bg-white flex justify-center items-center md:max-w-[370px] md:w-1/2 mx-auto cursor-pointer border border-[#2F70A6] border-2">
+            <div class="text-[#2F70A6] font-bold">
+                Посмотреть все
             </div>
         </div>
-    </div>
-    <div class="my-10 h-[61px] bg-white flex justify-center items-center md:max-w-[370px] md:w-1/2 mx-auto cursor-pointer border border-[#2F70A6] border-2">
-        <div class="text-[#2F70A6] font-bold">
-            Посмотреть все
-        </div>
-    </div>
 
-</div>
-<!---->
-<div id="contact" class=" mt-10" style="
+    </div>
+    <!---->
+    <div id="contact" class=" mt-10" style="
         background: linear-gradient(90deg, #2F70A6 10.9%, rgba(47, 112, 166, 0.855096) 41.43%, rgba(47, 112, 166, 0.632766) 84.54%, rgba(47, 112, 166, 0.318018) 107.57%, rgba(47, 112, 166, 0) 115.63%), url('assets/back.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top;">
-    <div class="container py-16 px-5 mx-auto flex flex-col md:flex-row justify-between">
-        <div class="flex flex-col justify-between">
-            <div class="text-white text-lg font-bold">Другая стр.</div>
-            <a class="text-[rgba(255,255,255,0.6)] cursor-pointer my-2 first:mt-0 last:mb-0">Пункт 1</a>
-            <a class="text-[rgba(255,255,255,0.6)] cursor-pointer my-2 first:mt-0 last:mb-0">Пункт 2</a>
-            <a class="text-[rgba(255,255,255,0.6)] cursor-pointer my-2 first:mt-0 last:mb-0">Пункт 3</a>
-            <a class="text-[rgba(255,255,255,0.6)] cursor-pointer my-2 first:mt-0 last:mb-0">Пункт 4</a>
-            <a class="text-[rgba(255,255,255,0.6)] cursor-pointer my-2 first:mt-0 last:mb-0">Пункт 5</a>
-            <a class="text-[rgba(255,255,255,0.6)] cursor-pointer my-2 first:mt-0 last:mb-0">Пункт 6</a>
-        </div>
-        <div class="mt-10 md:mt-0">
-            <div class="my-10 first:my-0 last:my-0">
-                <div class="text-white text-lg font-bold">Адрес:</div>
-                <div class="text-white">г. Киров ул. Московская, 36</div>
+        <div class="container py-16 px-5 mx-auto flex flex-col md:flex-row justify-between">
+            <div class="flex flex-col justify-between">
+                <div class="text-white text-lg font-bold">Другая стр.</div>
+                <a class="text-[rgba(255,255,255,0.6)] cursor-pointer my-2 first:mt-0 last:mb-0">Пункт 1</a>
+                <a class="text-[rgba(255,255,255,0.6)] cursor-pointer my-2 first:mt-0 last:mb-0">Пункт 2</a>
+                <a class="text-[rgba(255,255,255,0.6)] cursor-pointer my-2 first:mt-0 last:mb-0">Пункт 3</a>
+                <a class="text-[rgba(255,255,255,0.6)] cursor-pointer my-2 first:mt-0 last:mb-0">Пункт 4</a>
+                <a class="text-[rgba(255,255,255,0.6)] cursor-pointer my-2 first:mt-0 last:mb-0">Пункт 5</a>
+                <a class="text-[rgba(255,255,255,0.6)] cursor-pointer my-2 first:mt-0 last:mb-0">Пункт 6</a>
             </div>
-            <div class="my-10 my-10 first:my-0 last:my-0">
-                <div class="text-white text-lg font-bold">Телефон:</div>
-                <div class="text-white">+7 (912) 734-77-91</div>
-            </div>
-            <div class="my-10 my-10 first:my-0 last:my-0">
-                <div class="text-white text-lg font-bold">Email:</div>
-                <div class="text-white">email@example.com</div>
-            </div>
-        </div>
-    </div>
-    <div class="w-full px-5 bg-[#2F70A6] drop-shadow-[0_-10px_30px_rgba(0,0,0,0.25)]">
-        <div class="container mx-auto h-[70px] md:h-[100px] flex  justify-between items-center">
-            <div class="flex items-center">
-                <a class="h-[30px] w-[30px] bg-gray-300 mx-5 first:mx-0 last:mx-0"></a>
-                <a class="h-[30px] w-[30px] bg-gray-300 mx-5 first:mx-0 last:mx-0"></a>
-                <a class="h-[30px] w-[30px] bg-gray-300 mx-5 first:mx-0 last:mx-0"></a>
-            </div>
-            <div class="hidden md:flex justify-between text-white md:w-1/2">
-                <a class="text-[13px]" href="#about">О нас</a>
-                <a class="text-[13px]" href="#capabilities">Возможности</a>
-                <a class="text-[13px]" href="#for-whom">Для кого</a>
-                <a class="text-[13px]" href="#interaction">Взаимодействие</a>
-                <a class="text-[13px]" href="#projects">Проекты</a>
-                <a class="text-[13px]" href="#contact">Контакты</a>
+            <div class="mt-10 md:mt-0">
+                <div class="my-10 first:my-0 last:my-0">
+                    <div class="text-white text-lg font-bold">Адрес:</div>
+                    <div class="text-white">г. Киров ул. Московская, 36</div>
+                </div>
+                <div class="my-10 my-10 first:my-0 last:my-0">
+                    <div class="text-white text-lg font-bold">Телефон:</div>
+                    <div class="text-white">+7 (912) 734-77-91</div>
+                </div>
+                <div class="my-10 my-10 first:my-0 last:my-0">
+                    <div class="text-white text-lg font-bold">Email:</div>
+                    <div class="text-white">email@example.com</div>
+                </div>
             </div>
         </div>
+        <div class="w-full px-5 bg-[#2F70A6] drop-shadow-[0_-10px_30px_rgba(0,0,0,0.25)]">
+            <div class="container mx-auto h-[70px] md:h-[100px] flex  justify-between items-center">
+                <div class="flex items-center">
+                    <a class="h-[30px] w-[30px] bg-gray-300 mx-5 first:mx-0 last:mx-0"></a>
+                    <a class="h-[30px] w-[30px] bg-gray-300 mx-5 first:mx-0 last:mx-0"></a>
+                    <a class="h-[30px] w-[30px] bg-gray-300 mx-5 first:mx-0 last:mx-0"></a>
+                </div>
+                <div class="hidden md:flex justify-between text-white md:w-1/2">
+                    <a class="text-[13px]" href="#about">О нас</a>
+                    <a class="text-[13px]" href="#capabilities">Возможности</a>
+                    <a class="text-[13px]" href="#for-whom">Для кого</a>
+                    <a class="text-[13px]" href="#interaction">Взаимодействие</a>
+                    <a class="text-[13px]" href="#projects">Проекты</a>
+                    <a class="text-[13px]" href="#contact">Контакты</a>
+                </div>
+            </div>
 
+        </div>
     </div>
-</div>
-<!---->
+    <!---->
 </body>
+
 </html>
 <script>
     let isMobileMenuOpen = false;
@@ -781,7 +787,7 @@
             isMobileMenuOpen && toggleTopMenu()
             const targetEl = document.querySelector(this.getAttribute('href'));
             const y = targetEl.getBoundingClientRect().top + window.pageYOffset - pageTopOffset;
-            window.scrollTo({top: y, behavior: 'smooth'});
+            window.scrollTo({ top: y, behavior: 'smooth' });
         });
     });
 
@@ -793,7 +799,13 @@
         autoplayButtonOutput: false,
         gutter: 10,
         controlsContainer: "#customize-controls",
-        navPosition: "bottom"
+        nav:false,
+        navPosition: "bottom",
+        "responsive": {
+            "768": {
+                nav:true
+            },
+        },
     });
 
     const sliderMobile = tns({
@@ -804,17 +816,43 @@
         autoplayButtonOutput: false,
         gutter: 10,
         controlsContainer: "#customize-controls",
-        navPosition: "bottom"
+        nav:true,
+        navPosition: "bottom",
+        "responsive": {
+            "768": {
+                nav:false
+            },
+        },
     });
 
+    const sliderModal = tns({
+        container: '.sliderModal',
+        items: 1,
+        slideBy: 'page',
+        autoplay: true,
+        autoplayButtonOutput: false,
+        gutter: 10,
+        controlsContainer: "#customize-controls-modal",
+        navPosition: "bottom",
+
+    });
 
     document.getElementById("menu-mobile").addEventListener("click", toggleTopMenu)
 </script>
 
 <script>
     const openmodal = document.querySelectorAll('.modal-open')
+
+    const toggleModal = () => {
+        const body = document.querySelector('body')
+        const modal = document.querySelector('.modal')
+        modal.classList.toggle('opacity-0')
+        modal.classList.toggle('pointer-events-none')
+        body.classList.toggle('modal-active')
+    }
+
     for (let i = 0; i < openmodal.length; i++) {
-        openmodal[i].addEventListener('click', function(event){
+        openmodal[i].addEventListener('click', function (event) {
             event.preventDefault()
             toggleModal()
         })
@@ -828,7 +866,7 @@
         closemodal[i].addEventListener('click', toggleModal)
     }
 
-    document.onkeydown = function(evt) {
+    document.onkeydown = function (evt) {
         evt = evt || window.event
         let isEscape = false
         if ("key" in evt) {
@@ -840,15 +878,4 @@
             toggleModal()
         }
     };
-
-
-    function toggleModal () {
-        const body = document.querySelector('body')
-        const modal = document.querySelector('.modal')
-        modal.classList.toggle('opacity-0')
-        modal.classList.toggle('pointer-events-none')
-        body.classList.toggle('modal-active')
-    }
-
-
 </script>
