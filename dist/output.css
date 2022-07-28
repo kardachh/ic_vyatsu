@@ -641,6 +641,14 @@ video {
   bottom: 0px;
 }
 
+.right-\[8px\] {
+  right: 8px;
+}
+
+.right-\[5px\] {
+  right: 5px;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -702,12 +710,12 @@ video {
   margin-right: 1.25rem;
 }
 
-.ml-\[20px\] {
-  margin-left: 20px;
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
-.mt-0 {
-  margin-top: 0px;
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .mt-\[120px\] {
@@ -734,10 +742,6 @@ video {
   margin-left: 75px;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -748,6 +752,14 @@ video {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -1117,8 +1129,8 @@ video {
   text-align: center;
 }
 
-.text-\[16px\] {
-  font-size: 16px;
+.text-\[12px\] {
+  font-size: 12px;
 }
 
 .text-\[13px\] {
@@ -1133,8 +1145,8 @@ video {
   font-size: 20px;
 }
 
-.text-\[12px\] {
-  font-size: 12px;
+.text-\[16px\] {
+  font-size: 16px;
 }
 
 .text-3xl {
@@ -1398,6 +1410,10 @@ video {
     margin-top: 1.25rem;
   }
 
+  .xl\:mr-0 {
+    margin-right: 0px;
+  }
+
   .xl\:ml-\[20px\] {
     margin-left: 20px;
   }
@@ -1436,6 +1452,10 @@ video {
 
   .xl\:items-center {
     align-items: center;
+  }
+
+  .xl\:justify-between {
+    justify-content: space-between;
   }
 
   .xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {

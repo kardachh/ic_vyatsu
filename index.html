@@ -18,11 +18,11 @@
 
     <div id="top-menu" class="bg-[#2F70A6] fixed top-0 left-0 container max-w-full z-50 px-5 xl:px-0">
         <div id="top-row"
-            class="h-[50px] xl:h-[100px] flex flex-col xl:flex-row justify-between xl:items-center container mx-auto relative ">
+            class="h-[50px] xl:h-[100px] flex xl:flex-row xl:justify-between items-center xl:items-center container mx-auto relative ">
             <div class="flex items-center cursor-pointer w-fit" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <img id="logo" class="relative ml-[20px] mt-0 xl:mt-5 h-[60px] xl:h-auto" src="assets/logo_vyatsu.png"
+                <img id="logo" class="relative mt-3 xl:mt-5 h-[60px] xl:h-auto mr-2 xl:mr-0" src="assets/logo_vyatsu.png"
                     alt="vyatsu_logo" />
-                <div id="name" class="hidden xl:block text-white text-[16px] xl:ml-[20px] font-bold">
+                <div id="name" class="hidden xl:block text-white text-[12px] xl:ml-[20px] font-bold">
                     ИНЖИНИРИНГОВЫЙ ЦЕНТР<br>КИРОВСКОЙ ОБЛАСТИ
                 </div>
             </div>
@@ -46,10 +46,11 @@
                 <div><a class="text-[13px]" href="#interaction">Взаимодействие</a></div>
                 <div><a class="text-[13px]" href="#projects">Проекты</a></div>
                 <div><a class="text-[13px]" href="#contact">Контакты</a></div>
-
-
             </div>
-            <div id="menu-mobile" class="absolute h-full right-[10px] xl:hidden cursor-pointer flex items-center">
+            <div class="block xl:hidden text-white text-[12px] xl:ml-[20px] font-bold">
+                ИНЖИНИРИНГОВЫЙ ЦЕНТР<br>КИРОВСКОЙ ОБЛАСТИ
+            </div>
+            <div id="menu-mobile" class="absolute right-[5px] xl:hidden cursor-pointer flex items-center">
                 <div id="open-mobile-menu" class="space-y-1">
                     <div class="w-5 h-0.5 bg-[#D9D9D9]"></div>
                     <div class="w-5 h-0.5 bg-[#D9D9D9]"></div>
@@ -553,7 +554,7 @@
                 <div class="bg-[#8CADCB] flex justify-between items-center">
                     <div class="flex items-center p-5 -order-1 md:order-none">
                         <div class="text-white text-sm lg:text-base">
-                            ПОДЪЁМНО-ТРАНСПОРТНОЕОБОРУДОВАНИЕ
+                            ПОДЪЁМНО-ТРАНСПОРТНОЕОБОРУДОВАНИЕПОДЪЁМНО-ТРАНСПОРТНОЕОБОРУДОВАНИЕПОДЪЁМНО-ТРАНСПОРТНОЕОБОРУДОВАНИЕ
                         </div>
                     </div>
                     <div class="modal-close cursor-pointer flex flex-col items-center mr-6 text-black text-sm z-50">
@@ -773,12 +774,15 @@
         isMobileMenuOpen = !isMobileMenuOpen;
         document.getElementById("top-menu").classList.toggle("h-[50px]");
         document.getElementById("top-menu").classList.toggle("h-full");
+        document.getElementById("top-row").classList.toggle("flex-col");
+        document.getElementById("top-row").classList.toggle("items-center");
         document.getElementById("top-row").classList.toggle("mt-5");
         document.getElementById("logo").classList.toggle("hidden");
         document.getElementById("name").classList.toggle("hidden");
         document.getElementById("links").classList.toggle("hidden");
         document.getElementById("open-mobile-menu").classList.toggle("hidden");
         document.getElementById("close-mobile-menu").classList.toggle("hidden");
+        document.getElementById("menu-mobile").classList.toggle("items-center");
     }
     const pageTopOffset = 125;
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
