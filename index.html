@@ -790,59 +790,35 @@
     <!--  -->
     <div id="cooperators" class="container px-5 mx-auto mt-[100px]">
         <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">С НАМИ СОТРУДНИЧАЮТ</div>
-        <div class="h-[100px] lg:h-[120px] relative ">
-            <div id="cooperatorsSlider" class="flex justify-center items-center">
+        <div class="relative">
+            <div id="cooperatorsSlider" class="flex justify-center items-center  h-[100px] lg:h-[120px]">
                 <div class="flex justify-center items-center">
-                    <div class="flex justify-center items-center">
-                        <img src="assets/cooperators/vesta.png">
+                    <div class="h-[100px] lg:h-[120px]">
+                        <img class="object-scale-down w-full h-full" src="assets/projects_photo/image4.jpeg">
                     </div>
                 </div>
                 <div class="flex justify-center items-center">
-                    <div class="flex justify-center items-center">
-                        <img src="assets/cooperators/rosatom.png">
+                    <div class=" h-[100px] lg:h-[120px]">
+                        <img class="object-scale-down  w-full h-full"  src="assets/projects_photo/image3.png">
                     </div>
                 </div>
                 <div class="flex justify-center items-center">
-                    <div class="flex justify-center items-center">
-                        <img src="assets/cooperators/minobr.png">
+                    <div class=" h-[100px] lg:h-[120px]">
+                        <img class="object-scale-down  w-full h-full" src="assets/cooperators/minobr.png">
                     </div>
                 </div>
                 <div class="flex justify-center items-center">
-                    <div class="flex justify-center items-center">
-                        <img src="assets/cooperators/novovyatka.png">
+                    <div class="h-[100px] lg:h-[120px]">
+                        <img class="object-scale-down  w-full h-full" src="assets/cooperators/novovyatka.png">
                     </div>
                 </div>
-                <div class="flex justify-center items-center">
-                    <div class="flex justify-center items-center">
-                        <img src="assets/cooperators/vyatich.png">
-                    </div>
-                </div>
-                <div class="flex justify-center items-center">
-                    <div class="flex justify-center items-center">
-                        <img src="assets/cooperators/vesta.png">
-                    </div>
-                </div>
-                <div class="flex justify-center items-center">
-                    <div class="flex justify-center items-center">
-                        <img src="assets/cooperators/rosatom.png">
-                    </div>
-                </div>
-                <div class="flex justify-center items-center">
-                    <div class="flex justify-center items-center">
-                        <img src="assets/cooperators/minobr.png">
-                    </div>
-                </div>
-                <div class="flex justify-center items-center">
-                    <div class="flex justify-center items-center">
-                        <img src="assets/cooperators/novovyatka.png">
-                    </div>
-                </div>
-                <div class="flex justify-center items-center">
-                    <div class="flex justify-center items-center">
-                        <img src="assets/cooperators/vyatich.png">
+                <div class="flex justify-center items-center "> 
+                    <div class="h-[100px] lg:h-[120px]">
+                        <img class="object-scale-down  w-full h-full" src="assets/cooperators/vyatich.png">
                     </div>
                 </div>
             </div>
+            
             <div class="bg-gradient-to-r from-white absolute h-full left-0 top-0 w-[30px] md:w-[125px]"></div>
             <div class="bg-gradient-to-l from-white absolute h-full right-0 top-0 w-[30px] md:w-[125px]"></div>
             <div id="cooperatorsControl" class="flex justify-between items-center w-full h-full absolute top-[45%] left-0 translate-y-[-50%]">
@@ -989,7 +965,6 @@
 
     const sliderCooperators = tns({
         container: '#cooperatorsSlider',
-        edgePadding:'30px',
         slideBy: '1',
         loop:true,
         rewind: false,
@@ -997,7 +972,7 @@
         autoplayTimeout: 3000,
         speed: 2999,
         autoplayButtonOutput: false,
-        gutter: 10,
+        gutter: 30,
         controlsContainer: "#cooperatorsControl",
         nav: false,
         items:1,
