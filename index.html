@@ -585,23 +585,23 @@
                                     </div>
                                     <div class="flex justify-between items-center w-full absolute top-[45%] left-0 translate-y-[-50%]"
                                     id="customize-controls-modal" aria-label="Carousel Navigation" tabindex="0">
-                                    <div class="prev cursor-pointer" data-controls="prev" aria-controls="customize"
+                                        <div class="prev cursor-pointer" data-controls="prev" aria-controls="customize"
                                         tabindex="-1">
-                                        <div class="origin-center rotate-[135deg]" style="border: solid #048974;
-                                            border-width: 0 4px 4px 0;
-                                            display: inline-block;
-                                            padding: 5px;">
+                                            <div class="origin-center rotate-[135deg]" style="border: solid #048974;
+                                                border-width: 0 4px 4px 0;
+                                                display: inline-block;
+                                                padding: 5px;">
+                                            </div>
+                                        </div>
+                                        <div class="next flex justify-end cursor-pointer" data-controls="next"
+                                            aria-controls="customize" tabindex="-1">
+                                            <div class="origin-center -rotate-45" style="border: solid #048974;
+                                                border-width: 0 4px 4px 0;
+                                                display: inline-block;
+                                                padding: 5px;">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="next flex justify-end cursor-pointer" data-controls="next"
-                                        aria-controls="customize" tabindex="-1">
-                                        <div class="origin-center -rotate-45" style="border: solid #048974;
-                                    border-width: 0 4px 4px 0;
-                                    display: inline-block;
-                                    padding: 5px;">
-                                        </div>
-                                    </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
@@ -787,6 +787,78 @@
         </div>
 
     </div>
+    <!--  -->
+    <div id="cooperators" class="container px-5 mx-auto mt-[100px]">
+        <div class="text-[20px] md:text-[32px] text-center mb-10 font-bold">С НАМИ СОТРУДНИЧАЮТ</div>
+        <div class="h-[100px] lg:h-[120px] relative ">
+            <div id="cooperatorsSlider" class="flex justify-center items-center">
+                <div class="flex justify-center items-center">
+                    <div class="flex justify-center items-center">
+                        <img src="assets/cooperators/vesta.png">
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="flex justify-center items-center">
+                        <img src="assets/cooperators/rosatom.png">
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="flex justify-center items-center">
+                        <img src="assets/cooperators/minobr.png">
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="flex justify-center items-center">
+                        <img src="assets/cooperators/novovyatka.png">
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="flex justify-center items-center">
+                        <img src="assets/cooperators/vyatich.png">
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="flex justify-center items-center">
+                        <img src="assets/cooperators/vesta.png">
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="flex justify-center items-center">
+                        <img src="assets/cooperators/rosatom.png">
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="flex justify-center items-center">
+                        <img src="assets/cooperators/minobr.png">
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="flex justify-center items-center">
+                        <img src="assets/cooperators/novovyatka.png">
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="flex justify-center items-center">
+                        <img src="assets/cooperators/vyatich.png">
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gradient-to-r from-white absolute h-full left-0 top-0 w-[30px] md:w-[125px]"></div>
+            <div class="bg-gradient-to-l from-white absolute h-full right-0 top-0 w-[30px] md:w-[125px]"></div>
+            <div id="cooperatorsControl" class="flex justify-between items-center w-full h-full absolute top-[45%] left-0 translate-y-[-50%]">
+                <div class="origin-center rotate-[135deg]" style="border: solid #2F70A6;
+                    border-width: 0 4px 4px 0;
+                    display: inline-block;
+                    padding: 5px;">
+                </div>
+                <div class="origin-center -rotate-45" style="border: solid #2F70A6;
+                    border-width: 0 4px 4px 0;
+                    display: inline-block;
+                    padding: 5px;">
+                </div>
+            </div>
+        </div>
+    </div>
     <!---->
     <div id="contact" class=" mt-10" style="
         background: linear-gradient(90deg, #2F70A6 10.9%, rgba(47, 112, 166, 0.855096) 41.43%, rgba(47, 112, 166, 0.632766) 84.54%, rgba(47, 112, 166, 0.318018) 107.57%, rgba(47, 112, 166, 0) 115.63%), url('assets/back.png');
@@ -913,6 +985,33 @@
         gutter: 10,
         controlsContainer: "#customize-controls-modal",
         navPosition: "bottom",
+    });
+
+    const sliderCooperators = tns({
+        container: '#cooperatorsSlider',
+        edgePadding:'30px',
+        slideBy: '1',
+        loop:true,
+        rewind: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        speed: 2999,
+        autoplayButtonOutput: false,
+        gutter: 10,
+        controlsContainer: "#cooperatorsControl",
+        nav: false,
+        items:1,
+        responsive:{
+            640:{
+                items:3
+            },
+            768:{
+                items:4
+            },
+            1024:{
+                items:5
+            }
+        }
     });
 
     document.getElementById("menu-mobile").addEventListener("click", toggleTopMenu)
