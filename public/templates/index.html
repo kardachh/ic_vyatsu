@@ -20,7 +20,7 @@
 <body>
     <!-- top-menu -->
     <div id="top-menu-parent"
-        class="fixed top-0 px-[25px] lg:px-10 h-[70px] lg:h-[100px] w-full bg-white z-50 drop-shadow-[0_4px_20px_rgba(0,0,0,0.15)]">
+        class="fixed top-0 px-[25px] lg:px-10 h-[70px] lg:h-[100px] w-full bg-white z-[100] drop-shadow-[0_4px_20px_rgba(0,0,0,0.15)]">
         <div id="top-menu" class="container mx-auto h-full flex justify-between items-center">
             <div id="logo" class="flex items-center">
                 <img src="../../assets/logo2.svg" class="mr-[17px] h-[30px] lg:h-auto" />
@@ -44,7 +44,7 @@
     </div>
     <!-- О нас -->
     <div id="about" class="container px-5 mx-auto my-10 mb-20 bg-white mt-[70px] lg:mt-[100px]">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">О нас</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">О нас</div>
         <div class="flex flex-col md:grid grid-cols-3 gap-4 pb-10">
             <div class="order-last md:order-none col-span-1 row-span-2 overflow-hidden bg-cover min-h-[200px]">
                 <img class="w-full" src="../../assets/image.png" />
@@ -61,7 +61,7 @@
         </div>
     </div>
     <div id="about" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">О нас</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">О нас</div>
         <div class="flex flex-col md:grid grid-cols-3 gap-4 pb-10">
             <div class="col-span-2 leading-[36px] text-[16px]">
                 На базе ВятГУ создан и успешно функционирует Инжиниринговый центр (далее – ИЦ ВятГУ).
@@ -78,7 +78,7 @@
         </div>
     </div>
     <div id="about" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">О нас</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">О нас</div>
         <div class="flex flex-col md:grid grid-cols-3 gap-4 pb-10">
             <div class="col-span-full leading-[36px] text-[16px]">
                 На базе ВятГУ создан и успешно функционирует Инжиниринговый центр (далее – ИЦ ВятГУ).
@@ -95,7 +95,7 @@
         </div>
     </div>
     <div id="about" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">О нас</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">О нас</div>
         <div class="flex flex-col md:grid grid-cols-3 gap-4 pb-10">
             <div class="w-full col-span-full overflow-hidden bg-cover min-h-[200px]">
                 <img class="w-full" src="../../assets/back.png" />
@@ -115,12 +115,12 @@
     <!-- end О нас -->
     <!-- Галерея -->
     <div id="gallery" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Галерея</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Галерея</div>
         <!-- Slider main container -->
         <div class="flex flex-col justify-between items-center pb-10">
             <div class="mx-auto w-full  relative pb-10">
                 <div class="relative w-full">
-                    <div class="swiper swiper1 w-5/6 h-5/6">
+                    <div class="swiper swiper1 w-2/3 md:w-5/6 h-5/6">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->
@@ -137,8 +137,12 @@
 
                     </div>
                     <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev swiper1-button-prev"></div>
-                    <div class="swiper-button-next swiper1-button-next"></div>
+                    <div
+                        class="swiper-button-prev swiper1-button-prev !text-black after:!text-[20px] after:md:!text-[40px]">
+                    </div>
+                    <div
+                        class="swiper-button-next swiper1-button-next !text-black after:!text-[20px] after:md:!text-[40px]">
+                    </div>
                 </div>
             </div>
             <!-- If we need scrollbar -->
@@ -149,12 +153,12 @@
     </div>
 
     <div id="gallery" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Галерея</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Галерея</div>
         <!-- Slider main container -->
         <div class="flex flex-col justify-between items-center pb-10">
             <div class="mx-auto w-full  relative pb-10">
                 <div class="relative w-full">
-                    <div class="swiper swiper2 w-5/6 h-5/6">
+                    <div class="swiper swiper2 w-2/3 md:w-5/6 h-5/6">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->
@@ -190,8 +194,12 @@
 
                     </div>
                     <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev swiper2-button-prev"></div>
-                    <div class="swiper-button-next swiper2-button-next"></div>
+                    <div
+                        class="swiper-button-prev swiper2-button-prev !text-black after:!text-[20px] after:md:!text-[40px]">
+                    </div>
+                    <div
+                        class="swiper-button-next swiper2-button-next !text-black after:!text-[20px] after:md:!text-[40px]">
+                    </div>
                 </div>
             </div>
             <!-- If we need scrollbar -->
@@ -200,22 +208,23 @@
             </div>
         </div>
     </div>
-
-    <div id="gallery" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Галерея</div>
+    <!-- TODO: mobile version -->
+    <div id="gallery" class="container px-5 mx-auto my-10 mb-20 bg-white hidden md:block">
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Галерея</div>
         <!-- Slider main container -->
         <div class="flex flex-col justify-between items-center pb-10">
             <div class="mx-auto w-full  relative pb-10">
                 <div class="relative w-full">
-                    <div class="swiper swiper3 w-5/6 h-5/6">
+                    <div class="swiper swiper3 w-2/3 md:w-5/6 h-5/6">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             <div class="swiper-slide">
-                                <div class="grid gap-4 grid-cols-2">
-                                    <img class="row-span-2 w-full h-full" src="../../assets/projects_photo/image2.png">
-                                    <img class="w-full h-full" src="../../assets/image.png">
-                                    <img class="w-full h-full" src="../../assets/image.png">
+                                <div class="md:grid gap-4 grid-cols-2 inline">
+                                    <img class="row-span-2 w-full h-full inline-flex"
+                                        src="../../assets/projects_photo/image2.png">
+                                    <img class="w-full h-full inline-flex" src="../../assets/image.png">
+                                    <img class="w-full h-full inline" src="../../assets/image.png">
                                 </div>
                             </div>
                             <!-- Slides -->
@@ -247,8 +256,12 @@
 
                     </div>
                     <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev swiper3-button-prev"></div>
-                    <div class="swiper-button-next swiper3-button-next"></div>
+                    <div
+                        class="swiper-button-prev swiper3-button-prev !text-black after:!text-[20px] after:md:!text-[40px]">
+                    </div>
+                    <div
+                        class="swiper-button-next swiper3-button-next !text-black after:!text-[20px] after:md:!text-[40px]">
+                    </div>
                 </div>
             </div>
             <!-- If we need scrollbar -->
@@ -257,14 +270,14 @@
             </div>
         </div>
     </div>
-
-    <div id="gallery" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Галерея</div>
+    <!-- TODO: mobile version -->
+    <div id="gallery" class="container px-5 mx-auto my-10 mb-20 bg-white hidden md:block">
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Галерея</div>
         <!-- Slider main container -->
         <div class="flex flex-col justify-between items-center pb-10">
             <div class="mx-auto w-full  relative pb-10">
                 <div class="relative w-full">
-                    <div class="swiper swiper4 w-5/6 h-5/6">
+                    <div class="swiper swiper4 w-2/3 md:w-5/6 h-5/6">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->
@@ -307,8 +320,12 @@
 
                     </div>
                     <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev swiper4-button-prev"></div>
-                    <div class="swiper-button-next swiper4-button-next"></div>
+                    <div
+                        class="swiper-button-prev swiper4-button-prev !text-black after:!text-[20px] after:md:!text-[40px]">
+                    </div>
+                    <div
+                        class="swiper-button-next swiper4-button-next !text-black after:!text-[20px] after:md:!text-[40px]">
+                    </div>
                 </div>
             </div>
             <!-- If we need scrollbar -->
@@ -319,7 +336,7 @@
     </div>
 
     <div id="advantages" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Преимущества</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Преимущества</div>
         <div class="flex flex-col md:grid grid-cols-4 gap-4 pb-10">
             <div class="flex flex-col justify-center items-center">
                 <img src="../../assets/star.svg">
@@ -353,10 +370,10 @@
     </div>
 
     <div id="advantages" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Преимущества</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Преимущества</div>
         <div class="flex flex-col md:grid grid-cols-4 gap-4 pb-10">
             <div
-                class="flex flex-col justify-center items-center border-2 border-[#EDF2FF] px-[20px] py-[35px] rounded-xl drop-shadow-[0_-2px_15px_rgba(0,0,0,0.02),0_20px_40px_rgba(0,0,0,0.05)]">
+                class="flex flex-col justify-center items-center border-2 border-[#EDF2FF] px-[20px] py-[35px] rounded-xl bg-white drop-shadow-[0_20px_40px_rgba(0,0,0,0.05)]">
                 <img class="w-[50px]" src="../../assets/star.svg">
                 <div class="text-center text-[24px] mt-[15px]">
                     Преимущество
@@ -366,7 +383,7 @@
                 </div>
             </div>
             <div
-                class="flex flex-col justify-center items-center border-2 border-[#EDF2FF] px-[20px] py-[35px] rounded-xl drop-shadow-[0_-2px_15px_rgba(0,0,0,0.02),0_20px_40px_rgba(0,0,0,0.05)]">
+                class="flex flex-col justify-center items-center border-2 border-[#EDF2FF] px-[20px] py-[35px] rounded-xl bg-white drop-shadow-[0_20px_40px_rgba(0,0,0,0.05)]">
                 <img class="w-[50px]" src="../../assets/star.svg">
                 <div class="text-center text-[24px] mt-[15px]">
                     Преимущество
@@ -376,7 +393,7 @@
                 </div>
             </div>
             <div
-                class="flex flex-col justify-center items-center border-2 border-[#EDF2FF] px-[20px] py-[35px] rounded-xl drop-shadow-[0_-2px_15px_rgba(0,0,0,0.02),0_20px_40px_rgba(0,0,0,0.05)]">
+                class="flex flex-col justify-center items-center border-2 border-[#EDF2FF] px-[20px] py-[35px] rounded-xl bg-white drop-shadow-[0_20px_40px_rgba(0,0,0,0.05)]">
                 <img class="w-[50px]" src="../../assets/star.svg">
                 <div class="text-center text-[24px] mt-[15px]">
                     Преимущество
@@ -386,7 +403,7 @@
                 </div>
             </div>
             <div
-                class="flex flex-col justify-center items-center border-2 border-[#EDF2FF] px-[20px] py-[35px] rounded-xl drop-shadow-[0_-2px_15px_rgba(0,0,0,0.02),0_20px_40px_rgba(0,0,0,0.05)]">
+                class="flex flex-col justify-center items-center border-2 border-[#EDF2FF] px-[20px] py-[35px] rounded-xl bg-white drop-shadow-[0_20px_40px_rgba(0,0,0,0.05)]">
                 <img class="w-[50px]" src="../../assets/star.svg">
                 <div class="text-center text-[24px] mt-[15px]">
                     Преимущество
@@ -399,23 +416,23 @@
     </div>
 
     <div id="advantages" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Преимущества</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Преимущества</div>
         <div class="flex flex-col md:flex-row ">
             <div
                 class="py-[15px] px-[25px] mx-3 my-3 rounded-2xl border drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)] flex flex-auto items-center  bg-white">
-                <div class="">
-                    <img src="../../assets/advantages/percentage-discount 1.svg">
+                <div class="w-[40px] md:w-auto">
+                    <img class="w-full" src="../../assets/advantages/percentage-discount 1.svg">
                 </div>
-                <div class="text-[18px] ml-[50px]">
+                <div class="text-[12px] md:text-[18px] ml-3 md:ml-[50px]  w-full">
                     Зарабатываем на процентах, а не на судах
                 </div>
             </div>
             <div
                 class="py-[15px] px-[25px] mx-3 my-3 rounded-2xl border drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)] flex flex-auto items-center bg-white">
-                <div class="">
-                    <img src="../../assets/advantages/percentage-discount (2) 1.svg">
+                <div class="w-[40px] md:w-auto">
+                    <img class="w-full" src="../../assets/advantages/percentage-discount (2) 1.svg">
                 </div>
-                <div class="text-[18px] ml-[50px]">
+                <div class="text-[12px] md:text-[18px] ml-3 md:ml-[50px]  w-full">
                     Юридическая частота сделки
                 </div>
             </div>
@@ -423,19 +440,19 @@
         <div class="flex flex-col md:flex-row pb-10">
             <div
                 class="py-[15px] px-[25px] mx-3 my-3 rounded-2xl border drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)] flex flex-auto items-center bg-white">
-                <div class="">
-                    <img src="../../assets/advantages/percentage-discount (1) 1.svg">
+                <div class="w-[40px] md:w-auto">
+                    <img class="w-full" src="../../assets/advantages/percentage-discount (1) 1.svg">
                 </div>
-                <div class="text-[18px] ml-[50px]">
+                <div class="text-[12px] md:text-[18px] ml-3 md:ml-[50px]  w-full">
                     Недвижимость остается у вас в собственности
                 </div>
             </div>
             <div
                 class="py-[15px] px-[25px] mx-3 my-3 rounded-2xl border drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)] flex flex-auto items-center bg-white">
-                <div class="">
-                    <img src="../../assets/advantages/percentage-discount (3) 2.svg">
+                <div class="w-[40px] md:w-auto">
+                    <img class="w-full" src="../../assets/advantages/percentage-discount (3) 2.svg">
                 </div>
-                <div class="text-[18px] ml-[50px]">
+                <div class="text-[12px] md:text-[18px] ml-3 md:ml-[50px] w-full">
                     10 лет на рынке
                 </div>
             </div>
@@ -443,30 +460,38 @@
     </div>
 
     <div id="advantages" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Преимущества</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Преимущества</div>
         <div class="flex flex-col md:flex-row pb-10">
             <div class="flex-1 space-y-[25px]">
-                <div class="py-[25px] pl-[45px] drop-shadow-[0_8px_20px_rgba(0,128,104,0.25)] rounded-md bg-white">Мы
+                <div
+                    class="py-[25px] pl-3 md:pl-[45px] drop-shadow-[0_8px_20px_rgba(0,0,0,0.05)] rounded-md bg-white text-xs md:text-base">
+                    Мы
                     поможем с выбором направления</div>
-                <div class="py-[25px] pl-[45px] drop-shadow-[0_8px_20px_rgba(0,128,104,0.25)] rounded-md bg-white">Мы
+                <div
+                    class="py-[25px] pl-3 md:pl-[45px] drop-shadow-[0_8px_20px_rgba(0,0,0,0.05)] rounded-md bg-white text-xsmd:text-base">
+                    Мы
                     поможем с выбором направления</div>
-                <div class="py-[25px] pl-[45px] drop-shadow-[0_8px_20px_rgba(0,128,104,0.25)] rounded-md bg-white">Мы
+                <div
+                    class="py-[25px] pl-3 md:pl-[45px] drop-shadow-[0_8px_20px_rgba(0,0,0,0.05)] rounded-md bg-white text-xs md:text-base">
+                    Мы
                     поможем с выбором направления</div>
-                <div class="py-[25px] pl-[45px] drop-shadow-[0_8px_20px_rgba(0,128,104,0.25)] rounded-md bg-white">Мы
+                <div
+                    class="py-[25px] pl-3 md:pl-[45px] drop-shadow-[0_8px_20px_rgba(0,0,0,0.05)] rounded-md bg-white text-xs md:text-base">
+                    Мы
                     поможем с выбором направления</div>
 
                 <div
-                    class="py-[20px] drop-shadow-[0_8px_20px_rgba(0,128,104,0.25)] rounded-md bg-black text-center text-white text-[20px]">
+                    class="py-[20px] drop-shadow-[0_8px_20px_rgba(0,0,0,0.05)] rounded-md bg-black text-center text-white text-sm md:text-[20px]">
                     Посмотреть направления</div>
             </div>
-            <div class="flex-1 flex justify-center my-10 md:my-0">
+            <div class="flex-1 flex justify-center my-10 md:my-0 order-first md:order-last">
                 <img src="../../assets/projects_photo/image1.png" />
             </div>
         </div>
     </div>
 
     <div id="team" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Команда</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Команда</div>
         <!-- Slider main container -->
         <div class="flex flex-col justify-between items-center pb-10">
             <div class="mx-auto w-full  relative pb-10">
@@ -478,72 +503,65 @@
                             <div class="swiper-slide flex justify-center items-center">
                                 <div class="flex flex-col justify-center items-center">
                                     <img class="" src="../../assets/projects_photo/image1.png" />
-                                    <div class="text-[24px] font-bold">Ирина</div>
-                                    <div class="text-[20px] font-normal">Менеджер</div>
+                                    <div class="text-lg md:text-[24px] font-bold">Ирина</div>
+                                    <div class="text-sm md:text-[20px] font-normal">Менеджер</div>
                                 </div>
                             </div>
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-center items-center">
                                 <div class="flex flex-col justify-center items-center">
                                     <img class="" src="../../assets/projects_photo/image1.png" />
-                                    <div class="text-[24px] font-bold">Ирина</div>
-                                    <div class="text-[20px] font-normal">Менеджер</div>
+                                    <div class="text-lg md:text-[24px] font-bold">Ирина</div>
+                                    <div class="text-sm md:text-[20px] font-normal">Менеджер</div>
                                 </div>
                             </div>
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-center items-center">
                                 <div class="flex flex-col justify-center items-center">
                                     <img class="" src="../../assets/projects_photo/image1.png" />
-                                    <div class="text-[24px] font-bold">Ирина</div>
-                                    <div class="text-[20px] font-normal">Менеджер</div>
+                                    <div class="text-lg md:text-[24px] font-bold">Ирина</div>
+                                    <div class="text-sm md:text-[20px] font-normal">Менеджер</div>
                                 </div>
                             </div>
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-center items-center">
                                 <div class="flex flex-col justify-center items-center">
                                     <img class="" src="../../assets/projects_photo/image1.png" />
-                                    <div class="text-[24px] font-bold">Ирина</div>
-                                    <div class="text-[20px] font-normal">Менеджер</div>
+                                    <div class="text-lg md:text-[24px] font-bold">Ирина</div>
+                                    <div class="text-sm md:text-[20px] font-normal">Менеджер</div>
                                 </div>
                             </div>
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-center items-center">
                                 <div class="flex flex-col justify-center items-center">
                                     <img class="" src="../../assets/projects_photo/image1.png" />
-                                    <div class="text-[24px] font-bold">Ирина</div>
-                                    <div class="text-[20px] font-normal">Менеджер</div>
+                                    <div class="text-lg md:text-[24px] font-bold">Ирина</div>
+                                    <div class="text-sm md:text-[20px] font-normal">Менеджер</div>
                                 </div>
                             </div>
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-center items-center">
                                 <div class="flex flex-col justify-center items-center">
                                     <img class="" src="../../assets/projects_photo/image1.png" />
-                                    <div class="text-[24px] font-bold">Ирина</div>
-                                    <div class="text-[20px] font-normal">Менеджер</div>
+                                    <div class="text-lg md:text-[24px] font-bold">Ирина</div>
+                                    <div class="text-sm md:text-[20px] font-normal">Менеджер</div>
                                 </div>
                             </div>
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-center items-center">
                                 <div class="flex flex-col justify-center items-center">
                                     <img class="" src="../../assets/projects_photo/image1.png" />
-                                    <div class="text-[24px] font-bold">Ирина</div>
-                                    <div class="text-[20px] font-normal">Менеджер</div>
+                                    <div class="text-lg md:text-[24px] font-bold">Ирина</div>
+                                    <div class="text-sm md:text-[20px] font-normal">Менеджер</div>
                                 </div>
                             </div>
-                            <!-- Slides -->
-                            <div class="swiper-slide flex justify-center items-center">
-                                <div class="flex flex-col justify-center items-center">
-                                    <img class="" src="../../assets/projects_photo/image1.png" />
-                                    <div class="text-[24px] font-bold">Ирина</div>
-                                    <div class="text-[20px] font-normal">Менеджер</div>
-                                </div>
-                            </div>
+                            
                         </div>
 
                     </div>
                     <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev swiperTeam1-button-prev"></div>
-                    <div class="swiper-button-next swiperTeam1-button-next"></div>
+                    <div class="swiper-button-prev swiperTeam1-button-prev !text-black after:!text-[20px] after:md:!text-[40px]"></div>
+                    <div class="swiper-button-next swiperTeam1-button-next !text-black after:!text-[20px] after:md:!text-[40px]"></div>
                 </div>
             </div>
             <!-- If we need scrollbar -->
@@ -554,74 +572,65 @@
     </div>
 
     <div id="team" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Команда</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Команда</div>
         <!-- Slider main container -->
         <div class="flex flex-col justify-between items-center pb-10">
             <div class="mx-auto w-full  relative pb-10">
                 <div class="relative w-full">
-                    <div class="swiper swiperTeam2 w-5/6 h-5/6">
+                    <div class="swiper swiperTeam2 w-2/3 md:w-5/6 h-5/6">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper flex items-center">
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-center items-center">
-                                <div class="flex flex-col justify-center items-center">
+                                <div class="flex flex-col justify-center items-start">
                                     <img class="rounded-2xl" src="../../assets/black.webp" />
-                                    <div class="text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
-                                    <div class="text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
+                                    <div class="text-lg md:text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
+                                    <div class="text-sm md:text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
                                         и проектной деятельности</div>
                                 </div>
                             </div>
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-center items-center">
-                                <div class="flex flex-col justify-center items-center">
+                                <div class="flex flex-col justify-center items-start">
                                     <img class="rounded-2xl" src="../../assets/black.webp" />
-                                    <div class="text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
-                                    <div class="text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
+                                    <div class="text-lg md:text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
+                                    <div class="text-sm md:text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
                                         и проектной деятельности</div>
                                 </div>
                             </div>
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-center items-center">
-                                <div class="flex flex-col justify-center items-center">
+                                <div class="flex flex-col justify-center items-start">
                                     <img class="rounded-2xl" src="../../assets/black.webp" />
-                                    <div class="text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
-                                    <div class="text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
+                                    <div class="text-lg md:text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
+                                    <div class="text-sm md:text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
                                         и проектной деятельности</div>
                                 </div>
                             </div>
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-center items-center">
-                                <div class="flex flex-col justify-center items-center">
+                                <div class="flex flex-col justify-center items-start">
                                     <img class="rounded-2xl" src="../../assets/black.webp" />
-                                    <div class="text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
-                                    <div class="text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
+                                    <div class="text-lg md:text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
+                                    <div class="text-sm md:text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
                                         и проектной деятельности</div>
                                 </div>
                             </div>
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-center items-center">
-                                <div class="flex flex-col justify-center items-center">
+                                <div class="flex flex-col justify-center items-start">
                                     <img class="rounded-2xl" src="../../assets/black.webp" />
-                                    <div class="text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
-                                    <div class="text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
+                                    <div class="text-lg md:text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
+                                    <div class="text-sm md:text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
                                         и проектной деятельности</div>
                                 </div>
                             </div>
                             <!-- Slides -->
                             <div class="swiper-slide flex justify-center items-center">
-                                <div class="flex flex-col justify-center items-center">
+                                <div class="flex flex-col justify-center items-start">
                                     <img class="rounded-2xl" src="../../assets/black.webp" />
-                                    <div class="text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
-                                    <div class="text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
-                                        и проектной деятельности</div>
-                                </div>
-                            </div>
-                            <!-- Slides -->
-                            <div class="swiper-slide flex justify-center items-center">
-                                <div class="flex flex-col justify-center items-center">
-                                    <img class="rounded-2xl" src="../../assets/black.webp" />
-                                    <div class="text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
-                                    <div class="text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
+                                    <div class="text-lg md:text-[24px] font-semibold uppercase mt-[30px]">БАЖИН КОНСТАНТИН</div>
+                                    <div class="text-sm md:text-[20px] font-normal mt-[15px]">Проректор по стратегическому развитию
                                         и проектной деятельности</div>
                                 </div>
                             </div>
@@ -629,24 +638,24 @@
 
                     </div>
                     <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev swiperTeam2-button-prev"></div>
-                    <div class="swiper-button-next swiperTeam2-button-next"></div>
+                    <div class="swiper-button-prev swiperTeam2-button-prev !text-black after:!text-[20px] after:md:!text-[40px]"></div>
+                    <div class="swiper-button-next swiperTeam2-button-next !text-black after:!text-[20px] after:md:!text-[40px]"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="questions" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Вопросы</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Вопросы</div>
         <div class="pb-10 space-y-[30px]">
             <!-- open -->
             <div
                 class="question question-open drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)] bg-white flex-1 overflow-hidden rounded-md cursor-pointer">
                 <div class="flex my-5 items-center">
-                    <div class="ml-6 mr-3"><img class="question-cross" src="../../assets/cross X.svg" /></div>
-                    <div class="text-[24px] font-light">Почему выгоднее обратиться к нам?</div>
+                    <div class="ml-3 md:ml-6 md:mr-3"><img class="question-cross max-w-[50%] md:max-w-full" src="../../assets/cross X.svg" /></div>
+                    <div class="text-xs md:text-[24px] font-light">Почему выгоднее обратиться к нам?</div>
                 </div>
-                <div class="question-answer ml-16 text-[18px] pb-4 h-auto cursor-default font-light">
+                <div class="question-answer ml-11 md:ml-16 text-[10px] md:text-[18px] pb-4 h-auto cursor-default font-light">
                     Ответ
                     <br>
                     Ответ
@@ -656,10 +665,10 @@
             <div
                 class="question drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)] bg-white flex-1 overflow-hidden rounded-md cursor-pointer ">
                 <div class="flex my-5 items-center">
-                    <div class="ml-6 mr-3"><img class="question-cross" src="../../assets/cross +.svg" /></div>
-                    <div class="text-[24px] font-light">Почему выгоднее обратиться к нам?</div>
+                    <div class="ml-3 md:ml-6 md:mr-3"><img class="question-cross max-w-[50%] md:max-w-full" src="../../assets/cross +.svg" /></div>
+                    <div class="text-xs md:text-[24px] font-light">Почему выгоднее обратиться к нам?</div>
                 </div>
-                <div class="question-answer ml-16 text-[18px] pb-0 h-0 cursor-default font-light">
+                <div class="question-answer ml-11 md:ml-16 text-[10px] md:text-[18px] pb-0 h-0 cursor-default font-light">
                     Ответ
                     <br>
                     Ответ
@@ -669,16 +678,16 @@
     </div>
 
     <div id="questions" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Вопросы</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Вопросы</div>
         <div class="pb-10 space-y-[30px]">
             <!-- open -->
             <div
                 class="question question-open drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)] bg-white flex-1 overflow-hidden rounded-3xl cursor-pointer">
                 <div class="flex my-5 items-center">
-                    <div class="ml-6 mr-3"><img class="question-arrow" src="../../assets/arrow up.svg" /></div>
-                    <div class="text-[24px] font-light">Почему выгоднее обратиться к нам?</div>
+                    <div class="ml-3 md:ml-6 md:mr-3"><img class="question-arrow max-w-[50%] md:max-w-full" src="../../assets/arrow up.svg" /></div>
+                    <div class="text-xs md:text-[24px] font-light">Почему выгоднее обратиться к нам?</div>
                 </div>
-                <div class="question-answer ml-16 text-[18px] pb-4 h-auto cursor-default font-light">
+                <div class="question-answer ml-11 md:ml-16 text-[10px] md:text-[18px] pb-4 h-auto cursor-default font-light">
                     Ответ
                     <br>
                     Ответ
@@ -688,10 +697,10 @@
             <div
                 class="question drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)] bg-white flex-1 overflow-hidden rounded-3xl cursor-pointer ">
                 <div class="flex my-5 items-center">
-                    <div class="ml-6 mr-3"><img class="question-arrow" src="../../assets/arrow down.svg" /></div>
-                    <div class="text-[24px] font-light">Почему выгоднее обратиться к нам?</div>
+                    <div class="ml-3 md:ml-6 md:mr-3"><img class="question-arrow max-w-[50%] md:max-w-full" src="../../assets/arrow down.svg" /></div>
+                    <div class="text-xs md:text-[24px] font-light">Почему выгоднее обратиться к нам?</div>
                 </div>
-                <div class="question-answer ml-16 text-[18px] pb-0 h-0 cursor-default font-light">
+                <div class="question-answer ml-11 md:ml-16 text-[10px] md:text-[18px] pb-0 h-0 cursor-default font-light">
                     Ответ
                     <br>
                     Ответ
@@ -701,12 +710,12 @@
     </div>
 
     <div id="products" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Продукты</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Продукты</div>
         <!-- Slider main container -->
         <div class="flex flex-col justify-between items-center pb-10">
             <div class="mx-auto w-full  relative pb-10">
                 <div class="relative w-full">
-                    <div class="swiper swiperProducts w-5/6 h-5/6">
+                    <div class="swiper swiperProducts w-2/3 md:w-5/6 h-5/6">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper flex items-center">
                             <!-- Slides -->
@@ -811,15 +820,15 @@
 
                     </div>
                     <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev swiperProducts-button-prev"></div>
-                    <div class="swiper-button-next swiperProducts-button-next"></div>
+                    <div class="swiper-button-prev swiperProducts-button-prev !text-black after:!text-[20px] after:md:!text-[40px]"></div>
+                    <div class="swiper-button-next swiperProducts-button-next !text-black after:!text-[20px] after:md:!text-[40px]"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="products" class="container px-5 mx-auto my-10 mb-20 bg-white">
-        <div class="text-[20px] md:text-[32px] text-center py-10 font-bold">Продукты</div>
+        <div class="text-[24px] md:text-[32px] text-center py-10 font-bold">Продукты</div>
         <!-- Slider main container -->
         <div class="flex flex-col justify-between items-center pb-10">
             <div class="mx-auto w-full relative pb-10 space-y-[50px]">
@@ -918,7 +927,9 @@
     </div>
     <!-- contacts – контакты -->
     <div id="contacts" class="px-5 lg:px-10 container mx-auto">
-        <div class="uppercase text-[20px] lg:text-[32px] text-[#001C73] font-[600] mb-[20px] lg:mb-[40px] mt-[50px] lg:mt-[100px]">контакты</div>
+        <div
+            class="uppercase text-[20px] lg:text-[32px] text-[#001C73] font-[600] mb-[20px] lg:mb-[40px] mt-[50px] lg:mt-[100px]">
+            контакты</div>
         <div class="text-[12px] lg:text-[18px] space-y-3">
             <div>Телефон 8 800 555 35 35</div>
             <div>Телефон 8 800 555 35 35</div>
@@ -926,22 +937,27 @@
         </div>
     </div>
 
-<!-- feedback -->
+    <!-- feedback -->
     <div class="bg-[#FAFBFC]">
         <div class="px-5 lg:px-10 container mx-auto ">
-            <div class="uppercase text-[20px] lg:text-[32px] text-[#001C73] font-[600] mb-[20px] lg:mb-[40px] pt-[30px] lg:pt-[70px] mt-[50px] lg:mt-[100px]">опрос</div>
+            <div
+                class="uppercase text-[20px] lg:text-[32px] text-[#001C73] font-[600] mb-[20px] lg:mb-[40px] pt-[30px] lg:pt-[70px] mt-[50px] lg:mt-[100px]">
+                опрос</div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-[100px] gap-y-[30px]">
                 <div>
                     <label for="who" class="block mb-2 text-[12px] lg:text-[18px]">Кто ты?</label>
-                    <select id="who" class="border-2 border-[#7B89B6] rounded-2xl block w-full p-2.5 text-[12px] lg:text-[18px]">
+                    <select id="who"
+                        class="border-2 border-[#7B89B6] rounded-2xl block w-full p-2.5 text-[12px] lg:text-[18px]">
                         <option selected>Школьник</option>
                         <option>Студент</option>
                         <option>Педагог</option>
                     </select>
                 </div>
                 <div class="col-start-1">
-                    <label for="contact-feedback" class="block mb-2 text-[12px] lg:text-[18px]">Твои контакты для обратной связи</label>
-                    <input id="contact-feedback" class="border-2 border-[#7B89B6] rounded-2xl block w-full p-2.5 text-[12px] lg:text-[18px]"/>
+                    <label for="contact-feedback" class="block mb-2 text-[12px] lg:text-[18px]">Твои контакты для
+                        обратной связи</label>
+                    <input id="contact-feedback"
+                        class="border-2 border-[#7B89B6] rounded-2xl block w-full p-2.5 text-[12px] lg:text-[18px]" />
                 </div>
                 <div class="row-span-2 lg:col-start-2 lg:row-start-1 relative">
                     <div class="text-[12px] lg:text-[18px] mb-2">Твои предложения авторам</div>
@@ -950,10 +966,13 @@
                         <br>
                         в нашем дата-конструкторе, что понравилось, а что не очень
                     </div>
-                    <textarea rows="3" class="border-2 border-[#7B89B6] rounded-2xl resize-none w-full object-cover text-[12px] lg:text-[18px] p-3 lg:absolute bottom-0 right-0"></textarea>
+                    <textarea rows="3"
+                        class="border-2 border-[#7B89B6] rounded-2xl resize-none w-full object-cover text-[12px] lg:text-[18px] p-3 lg:absolute bottom-0 right-0"></textarea>
                 </div>
             </div>
-            <div class="w-full my-[25px] lg:my-[50px] uppercase bg-[#001C73] text-white text-[12px] lg:text-[18px] font-[600] rounded-2xl p-3 text-center">отправить</div>
+            <div
+                class="w-full my-[25px] lg:my-[50px] uppercase bg-[#001C73] text-white text-[12px] lg:text-[18px] font-[600] rounded-2xl p-3 text-center">
+                отправить</div>
         </div>
     </div>
 </body>
@@ -973,7 +992,7 @@
     const swiper2 = new Swiper('.swiper2', {
         direction: 'horizontal',
         loop: false,
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
             nextEl: '.swiper2-button-next',
@@ -982,6 +1001,12 @@
         scrollbar: {
             el: '.swiper2-scrollbar',
         },
+        breakpoints: {
+            // when window width is >= 640px
+            768: {
+                slidesPerView: 3,
+            }
+        }
     });
 
     const swiper3 = new Swiper('.swiper3', {
@@ -1011,34 +1036,61 @@
     const swiperTeam1 = new Swiper('.swiperTeam1', {
         direction: 'horizontal',
         loop: false,
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 50,
         navigation: {
             nextEl: '.swiperTeam1-button-next',
             prevEl: '.swiperTeam1-button-prev',
         },
+        breakpoints: {
+            // when window width is >= 640px
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4
+            }
+        }
     })
 
     const swiperTeam2 = new Swiper('.swiperTeam2', {
         direction: 'horizontal',
         loop: false,
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
             nextEl: '.swiperTeam2-button-next',
             prevEl: '.swiperTeam2-button-prev',
         },
+        breakpoints: {
+            // when window width is >= 640px
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4
+            }
+        }
     })
 
     const swiperProducts = new Swiper('.swiperProducts', {
         direction: 'horizontal',
         loop: false,
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
             nextEl: '.swiperProducts-button-next',
             prevEl: '.swiperProducts-button-prev',
         },
+        breakpoints: {
+            // when window width is >= 640px
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4
+            }
+        }
     })
 
 </script>
