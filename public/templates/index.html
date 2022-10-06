@@ -924,6 +924,13 @@
             </div>
         </div>
     </div>
+
+    <div class="container mx-auto flex justify-center items-center space-x-4">
+        <button class="outline outline-offset-2 outline-3 outline-blue-500 p-4 rounded-2xl hover:bg-blue-500 hover:text-white" onclick="toggleModal('modal1')">Вариант 1</button>
+        <button class="outline outline-offset-2 outline-3 outline-blue-500 p-4 rounded-2xl hover:bg-blue-500 hover:text-white" onclick="toggleModal('modal2')">Вариант 2</button>
+    </div>
+
+
     <!-- contacts – контакты -->
     <div id="contacts" class="px-5 lg:px-10 container mx-auto">
         <div
@@ -980,11 +987,11 @@
         class="hidden fixed z-[150] bg-black bg-opacity-50 h-full w-full top-0 left-0 flex-col justify-center items-center md:p-5">
         <div id="modal1" class="hidden md:container w-full h-full md:h-auto bg-white md:rounded-2xl p-5 overflow-auto">
             <div class="flex justify-between items-center">
-                <div class="flex justify-center items-center md:mb-4 cursor-pointer" onclick="toggleModal()">
+                <div class="flex justify-center items-center md:mb-4 cursor-pointer" onclick="toggleModal('modal1')">
                     <img class="w-2 md:w-3" src="../../assets/arrow_gallery_left.svg" />
                     <div class="ml-3 text-xs md:text-sm">Смотреть больше</div>
                 </div>
-                <div class="cursor-pointer" onclick="toggleModal()"><img src="../../assets/cross X.svg" /></div>
+                <div class="cursor-pointer" onclick="toggleModal('modal1')"><img src="../../assets/cross X.svg" /></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-[40px] gap-4 md:auto-rows-min">
                 <div
@@ -1130,7 +1137,7 @@
                 <div class="flex justify-center items-center cursor-pointer text-lg md:text-2xl font-semibold">
                     Название
                 </div>
-                <div class="cursor-pointer" onclick="toggleModal()"><img class="md:w-10"
+                <div class="cursor-pointer" onclick="toggleModal('modal2')"><img class="md:w-10"
                         src="../../assets/cross X.svg" /></div>
             </div>
             <!-- Swiper -->
@@ -1492,16 +1499,12 @@
 
 </script>
 
-<!--    показ модального окна
-        при каждом показе меняется шаблон        
--->
+<!--    показ модального окна   -->
 <script>
-    let lastmodal = "modal2";
-    const toggleModal = () => {
+    const toggleModal = (modalInfo) => {
         document.getElementById("modal-back").classList.toggle("hidden")
         document.getElementById("modal-back").classList.toggle("flex")
-        document.getElementById(lastmodal).classList.toggle("hidden")
-        lastmodal = lastmodal==="modal1" ? "modal2" : "modal1"
+        modalInfo && document.getElementById(modalInfo).classList.toggle("hidden")
     };
 </script>
 
