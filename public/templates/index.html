@@ -755,7 +755,7 @@
                                         поддерживать тех из них, кому
                                         не посчастливилось иметь ласковых хозяев и тёплый кров.</div>
                                     <div class="flex justify-center items-center text-white text-lg bg-[#8C8C8C] py-3 rounded-md mt-[15px]"
-                                        onclick="toogleModal()">
+                                        onclick="toggleModal()">
                                         Посмотреть больше
                                     </div>
                                 </div>
@@ -769,7 +769,7 @@
                                         поддерживать тех из них, кому
                                         не посчастливилось иметь ласковых хозяев и тёплый кров.</div>
                                     <div class="flex justify-center items-center text-white text-lg bg-[#8C8C8C] py-3 rounded-md mt-[15px]"
-                                        onclick="toogleModal()">
+                                        onclick="toggleModal()">
                                         Посмотреть больше
                                     </div>
                                 </div>
@@ -783,7 +783,7 @@
                                         поддерживать тех из них, кому
                                         не посчастливилось иметь ласковых хозяев и тёплый кров.</div>
                                     <div class="flex justify-center items-center text-white text-lg bg-[#8C8C8C] py-3 rounded-md mt-[15px]"
-                                        onclick="toogleModal()">
+                                        onclick="toggleModal()">
                                         Посмотреть больше
                                     </div>
                                 </div>
@@ -797,7 +797,7 @@
                                         поддерживать тех из них, кому
                                         не посчастливилось иметь ласковых хозяев и тёплый кров.</div>
                                     <div class="flex justify-center items-center text-white text-lg bg-[#8C8C8C] py-3 rounded-md mt-[15px]"
-                                        onclick="toogleModal()">
+                                        onclick="toggleModal()">
                                         Посмотреть больше
                                     </div>
                                 </div>
@@ -811,7 +811,7 @@
                                         поддерживать тех из них, кому
                                         не посчастливилось иметь ласковых хозяев и тёплый кров.</div>
                                     <div class="flex justify-center items-center text-white text-lg bg-[#8C8C8C] py-3 rounded-md mt-[15px]"
-                                        onclick="toogleModal()">
+                                        onclick="toggleModal()">
                                         Посмотреть больше
                                     </div>
                                 </div>
@@ -825,7 +825,7 @@
                                         поддерживать тех из них, кому
                                         не посчастливилось иметь ласковых хозяев и тёплый кров.</div>
                                     <div class="flex justify-center items-center text-white text-lg bg-[#8C8C8C] py-3 rounded-md mt-[15px]"
-                                        onclick="toogleModal()">
+                                        onclick="toggleModal()">
                                         Посмотреть больше
                                     </div>
                                 </div>
@@ -839,7 +839,7 @@
                                         поддерживать тех из них, кому
                                         не посчастливилось иметь ласковых хозяев и тёплый кров.</div>
                                     <div class="flex justify-center items-center text-white text-lg bg-[#8C8C8C] py-4 rounded-md mt-[15px]"
-                                        onclick="toogleModal()">
+                                        onclick="toggleModal()">
                                         Посмотреть больше
                                     </div>
                                 </div>
@@ -878,7 +878,7 @@
                             экономическую ситуацию, призваны к ответу.
                         </div>
                         <div class="text-center text-white text-lg bg-[#8C8C8C] py-3 rounded-md md:mt-[15px] md:w-[300px]"
-                            onclick="toogleModal()">
+                            onclick="toggleModal()">
                             Посмотреть больше
                         </div>
                     </div>
@@ -897,7 +897,7 @@
                             экономическую ситуацию, призваны к ответу.
                         </div>
                         <div class="text-center text-white text-lg bg-[#8C8C8C] py-3 rounded-md md:mt-[15px] md:w-[300px]"
-                            onclick="toogleModal()">
+                            onclick="toggleModal()">
                             Посмотреть больше
                         </div>
                     </div>
@@ -916,7 +916,7 @@
                             экономическую ситуацию, призваны к ответу.
                         </div>
                         <div class="text-center text-white text-lg bg-[#8C8C8C] py-3 rounded-md md:mt-[15px] md:w-[300px]"
-                            onclick="toogleModal()">
+                            onclick="toggleModal()">
                             Посмотреть больше
                         </div>
                     </div>
@@ -978,13 +978,13 @@
     <!-- modal -->
     <div id="modal-back"
         class="hidden fixed z-[150] bg-black bg-opacity-50 h-full w-full top-0 left-0 flex-col justify-center items-center md:p-5">
-        <div class="md:container w-full bg-white md:rounded-2xl p-5 overflow-auto">
-            <div class="flex justify-between items-center cursor-pointer">
-                <div class="flex justify-center items-center md:mb-4" onclick="toogleModal()">
+        <div id="modal1" class="hidden md:container w-full h-full md:h-auto bg-white md:rounded-2xl p-5 overflow-auto">
+            <div class="flex justify-between items-center">
+                <div class="flex justify-center items-center md:mb-4 cursor-pointer" onclick="toggleModal()">
                     <img class="w-2 md:w-3" src="../../assets/arrow_gallery_left.svg" />
                     <div class="ml-3 text-xs md:text-sm">Смотреть больше</div>
                 </div>
-                <div class="cursor-pointer" onclick="toogleModal()"><img src="../../assets/cross X.svg" /></div>
+                <div class="cursor-pointer" onclick="toggleModal()"><img src="../../assets/cross X.svg" /></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-[40px] gap-4 md:auto-rows-min">
                 <div
@@ -1064,7 +1064,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="md:col-start-2 md:col-span-2 text-xs md:text-sm">
+                <div class="md:col-start-2 md:col-span-2 text-xs md:text-base">
                     Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а также
                     свежий взгляд на привычные вещи — безусловно открывает новые горизонты для системы обучения
                     кадров, соответствующей насущным потребностям. Высокий уровень вовлечения представителей целевой
@@ -1120,65 +1120,157 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div id="recomendation" class="my-10 bg-white">
+            </div>
+        </div>
+
+
+        <div id="modal2"
+            class="hidden md:container w-full md:w-2/3 h-full md:h-auto bg-white md:rounded-2xl py-5 px-5 md:px-10 overflow-auto">
+            <div class="flex justify-between items-center mb-4 md:mb-8">
+                <div class="flex justify-center items-center cursor-pointer text-lg md:text-2xl font-semibold">
+                    Название
+                </div>
+                <div class="cursor-pointer" onclick="toggleModal()"><img class="md:w-10"
+                        src="../../assets/cross X.svg" /></div>
+            </div>
+            <!-- Swiper -->
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-button-test1-next"></div>
+                <div class="swiper-button-prev swiper-button-test1-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper3 mt-8 hidden md:block">
+                <div class="swiper-wrapper ">
+                    <div class="swiper-slide">
+                        <img class="rounded-2xl" src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-2xl" src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-2xl" src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-2xl" src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-2xl" src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-2xl" src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-2xl" src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-2xl" src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-2xl" src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="rounded-2xl" src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-xs md:text-base">
+                В рамках спецификации современных стандартов, некоторые особенности внутренней политики, превозмогая
+                сложившуюся непростую экономическую ситуацию, описаны максимально подробно. Кстати, тщательные
+                исследования конкурентов, превозмогая сложившуюся непростую экономическую ситуацию, призваны
+                к ответу.
+            </div>
+            <div>
+                <div class="mt-8 text-xs font-semibold">Вам может понравиться</div>
+                <div id="recomendation" class="my-10 bg-white">
 
                     <div class="flex flex-col justify-between items-center">
                         <div class="mx-auto w-full relative">
                             <div class="relative w-full">
-                                <div class="swiper swiperRecomendation1 w-2/3 md:w-5/6 h-5/6">
+                                <div class="swiper swiperRecomendation2 w-2/3 md:w-5/6 h-5/6">
                                     <div class="swiper-wrapper flex items-start ">
                                         <div class="swiper-slide flex justify-center items-center">
                                             <div class="flex flex-col justify-center items-start">
                                                 <img class="rounded-2xl" src="../../assets/black.webp" />
-                                                <div class="text-sm md:text-[20px] font-normal mt-[15px]">Название</div>
+                                                <div class="text-sm  font-normal my-[15px]">Название</div>
                                                 <div
-                                                    class="text-center text-black text-lg bg-[#D9D9D9] py-3 rounded-md md:mt-[15px] w-full">
-                                                    Посмотреть больше
+                                                    class="text-center text-black text-xs bg-[#D9D9D9] py-3 rounded-md mt-[15px] md:mt-0 w-full">
+                                                    Подробнее
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide flex justify-center items-center">
                                             <div class="flex flex-col justify-center items-start">
                                                 <img class="rounded-2xl" src="../../assets/black.webp" />
-                                                <div class="text-sm md:text-[20px] font-normal mt-[15px]">Название</div>
+                                                <div class="text-sm  font-normal my-[15px]">Название</div>
                                                 <div
-                                                    class="text-center text-black text-lg bg-[#D9D9D9] py-3 rounded-md md:mt-[15px] w-full">
-                                                    Посмотреть больше
+                                                    class="text-center text-black text-xs bg-[#D9D9D9] py-3 rounded-md mt-[15px] md:mt-0 w-full">
+                                                    Подробнее
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide flex justify-center items-center">
                                             <div class="flex flex-col justify-center items-start">
                                                 <img class="rounded-2xl" src="../../assets/black.webp" />
-                                                <div class="text-sm md:text-[20px] font-normal mt-[15px]">Название</div>
+                                                <div class="text-sm  font-normal my-[15px]">Название</div>
                                                 <div
-                                                    class="text-center text-black text-lg bg-[#D9D9D9] py-3 rounded-md md:mt-[15px] w-full">
-                                                    Посмотреть больше
+                                                    class="text-center text-black text-xs bg-[#D9D9D9] py-3 rounded-md mt-[15px] md:mt-0 w-full">
+                                                    Подробнее
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide flex justify-center items-center">
                                             <div class="flex flex-col justify-center items-start">
                                                 <img class="rounded-2xl" src="../../assets/black.webp" />
-                                                <div class="text-sm md:text-[20px] font-normal mt-[15px]">Название</div>
+                                                <div class="text-sm  font-normal my-[15px]">Название</div>
                                                 <div
-                                                    class="text-center text-black text-lg bg-[#D9D9D9] py-3 rounded-md md:mt-[15px] w-full">
-                                                    Посмотреть больше
+                                                    class="text-center text-black text-xs bg-[#D9D9D9] py-3 rounded-md mt-[15px] md:mt-0 w-full">
+                                                    Подробнее
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div
-                                    class="swiper-button-prev swiperRecomendation1-button-prev !text-black after:!text-[20px] after:md:!text-[40px]">
+                                    class="swiper-button-prev swiperRecomendation2-button-prev !text-black after:!text-[20px] after:md:!text-[40px]">
                                 </div>
                                 <div
-                                    class="swiper-button-next swiperRecomendation1-button-next !text-black after:!text-[20px] after:md:!text-[40px]">
+                                    class="swiper-button-next swiperRecomendation2-button-next !text-black after:!text-[20px] after:md:!text-[40px]">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -1320,6 +1412,24 @@
         },
     });
 
+    const swipertest3 = new Swiper(".mySwiper3", {
+        spaceBetween: 30,
+        slidesPerView: 6,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    const swipertest4 = new Swiper(".mySwiper4", {
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".swiper-button-test1-next",
+            prevEl: ".swiper-button-test1-prev",
+        },
+        thumbs: {
+            swiper: swipertest3,
+        },
+    });
+
+
     const swiperRecomendation1 = new Swiper('.swiperRecomendation1', {
         direction: 'horizontal',
         loop: false,
@@ -1337,6 +1447,23 @@
             1024: {
                 slidesPerView: 4
             }
+        }
+    })
+
+    const swiperRecomendation2 = new Swiper('.swiperRecomendation2', {
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiperRecomendation2-button-next',
+            prevEl: '.swiperRecomendation2-button-prev',
+        },
+        breakpoints: {
+            // when window width is >= 640px
+            768: {
+                slidesPerView: 2,
+            },
         }
     })
 </script>
@@ -1365,10 +1492,16 @@
 
 </script>
 
+<!--    показ модального окна
+        при каждом показе меняется шаблон        
+-->
 <script>
-    const toogleModal = () => {
+    let lastmodal = "modal2";
+    const toggleModal = () => {
         document.getElementById("modal-back").classList.toggle("hidden")
         document.getElementById("modal-back").classList.toggle("flex")
+        document.getElementById(lastmodal).classList.toggle("hidden")
+        lastmodal = lastmodal==="modal1" ? "modal2" : "modal1"
     };
 </script>
 
