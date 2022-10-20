@@ -28,17 +28,17 @@
                         class="text-[#E70029]">2030</span></div>
             </div>
             <div id="links" class="hidden lg:flex justify-between items-center lg:w-1/2">
-                <div><a class="text-[16px] text-[#001C73] font-[600]" href="#about">О проекте</a></div>
-                <div><a class="text-[16px] text-[#001C73] font-[600]" href="#foundation">Ценностные основы</a></div>
-                <div><a class="text-[16px] text-[#001C73] font-[600]" href="#blocks">Блоки</a></div>
+                <div><a class="text-[16px] text-[#001C73] font-[600]" href="#about">О нас</a></div>
+                <div><a class="text-[16px] text-[#001C73] font-[600]" href="#gallery">Галерея</a></div>
+                <div><a class="text-[16px] text-[#001C73] font-[600]" href="#advantages">Преимущества</a></div>
                 <div><a class="text-[16px] text-[#001C73] font-[600]" href="#team">Команда</a></div>
-                <div><a class="text-[16px] text-[#001C73] font-[600]" href="#contacts">Контакты</a></div>
+                <div><a class="text-[16px] text-[#001C73] font-[600]" href="#products">Продукты</a></div>
             </div>
             <div id="open-menu" class="lg:hidden">
-                <img src="assets/burger.svg" class="cursor-pointer" />
+                <img src="/assets/burger.svg" class="cursor-pointer" />
             </div>
             <div id="close-menu" class="hidden absolute top-[25px] right-[25px]">
-                <img src="assets/close.svg" class="cursor-pointer" />
+                <img src="/assets/close.svg" class="cursor-pointer" />
             </div>
         </div>
     </div>
@@ -926,8 +926,12 @@
     </div>
 
     <div class="container mx-auto flex justify-center items-center space-x-4">
-        <button class="outline outline-offset-2 outline-3 outline-blue-500 p-4 rounded-2xl hover:bg-blue-500 hover:text-white" onclick="toggleModal('modal1')">Вариант 1</button>
-        <button class="outline outline-offset-2 outline-3 outline-blue-500 p-4 rounded-2xl hover:bg-blue-500 hover:text-white" onclick="toggleModal('modal2')">Вариант 2</button>
+        <button
+            class="outline outline-offset-2 outline-3 outline-blue-500 p-4 rounded-2xl hover:bg-blue-500 hover:text-white"
+            onclick="toggleModal('modal1')">Вариант 1</button>
+        <button
+            class="outline outline-offset-2 outline-3 outline-blue-500 p-4 rounded-2xl hover:bg-blue-500 hover:text-white"
+            onclick="toggleModal('modal2')">Вариант 2</button>
     </div>
 
 
@@ -1506,6 +1510,39 @@
         document.getElementById("modal-back").classList.toggle("flex")
         modalInfo && document.getElementById(modalInfo).classList.toggle("hidden")
     };
+</script>
+
+<script>
+    let mobileMenuIsOpen = false;
+
+    const toggleMobileMenu = () => {
+        if (document.documentElement.clientWidth < 1024) {
+            document.getElementById("top-menu-parent").classList.toggle("h-full")
+            document.getElementById("top-menu-parent").classList.toggle("px-[25px]")
+            document.getElementById("top-menu-parent").classList.toggle("h-[70px]")
+            document.getElementById("top-menu").classList.toggle("flex-col")
+            document.getElementById("top-menu").classList.toggle("items-center")
+            document.getElementById("top-menu").classList.toggle("items-start")
+            document.getElementById("top-menu").classList.toggle("justify-between")
+            document.getElementById("top-menu").classList.toggle("justify-start")
+            document.getElementById("logo").classList.toggle("w-full")
+            document.getElementById("logo").classList.toggle("px-[25px]")
+            document.getElementById("logo").classList.toggle("border-b-2")
+            document.getElementById("logo").classList.toggle("border-[#808DB9]")
+            document.getElementById("logo").classList.toggle("h-[70px]")
+            document.getElementById("logo").classList.toggle("mb-[20px]")
+            document.getElementById("links").classList.toggle("px-[25px]")
+            document.getElementById("links").classList.toggle("hidden")
+            document.getElementById("links").classList.toggle("space-y-[25px]")
+            document.getElementById("open-menu").classList.toggle("hidden")
+            document.getElementById("close-menu").classList.toggle("hidden")
+            mobileMenuIsOpen = !mobileMenuIsOpen
+        }
+    }
+
+    document.getElementById("open-menu").addEventListener("click", toggleMobileMenu)
+    document.getElementById("close-menu").addEventListener("click", toggleMobileMenu)
+    Array.from(document.getElementById("links").children).forEach((link)=> link.addEventListener("click", toggleMobileMenu))
 </script>
 
 </html>
