@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../dist/output.css" rel="stylesheet" />
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <title>Календарь</title>
+</head>
+
+<body>
+    <div class="container mx-auto my-20">
+
+        <div class="flex text-sm md:text-xl lg:text-2xl font-bold mx-5 md:mx-10">
+            <div class="flex justify-between items-center w-16 ">
+                <div class="cursor-pointer" onclick="setPrevMonth()">
+                    <img src="./../../assets/arrow_calendar.svg">
+                </div>
+                <div class="cursor-pointer" onclick="setNextMonth()">
+                    <img class="rotate-180" src="./../../assets/arrow_calendar.svg">
+                </div>
+            </div>
+            <div id="month" class="ml-8">
+
+            </div>
+            <div id="year" class="ml-3 text-[#E0E0E0]">
+
+            </div>
+        </div>
+
+        <div id="calendar" class="mt-4 mx-5 md:mx-10 grid grid-cols-7 gap-[1px] bg-[#E1E1E1] px-[1px]">
+
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->
+<script>
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    moment.locale('ru')
+    // month 0-11
+    const events = [
+        {
+            month: 11,
+            day: 1,
+            name: "День судебного пристава",
+            description: "ОписаниеОписание ОписаниеОписаниеОписаниеОписаниеОписание ОписаниеОписаниеОписание Описание",
+        }
+    ]
+
+    let selectedMoment = moment();
+    let currentMonth = moment().month()
+
+    const calendarEl = document.querySelector("#calendar");
+    const monthEl = document.querySelector("#month");
+    const yearEL = document.querySelector("#year");
+
+    const setMonthYear = (monthEL, yearEL, date) => {
+        monthEL.innerHTML = capitalizeFirstLetter(date.format("MMMM"))
+        yearEL.innerHTML = date.year()
+    }
+
+    const setPrevMonth = () => {
+        selectedMoment = selectedMoment.subtract(1, "month");
+        currentMonth = selectedMoment.month()
+        fillCalendar(calendarEl, moment(selectedMoment))
+        setMonthYear(monthEl, yearEL, selectedMoment)
+    }
+
+    const setNextMonth = () => {
+        selectedMoment = selectedMoment.add(1, "month");
+        currentMonth = selectedMoment.month()
+        fillCalendar(calendarEl, moment(selectedMoment))
+        setMonthYear(monthEl, yearEL, selectedMoment)
+    }
+
+    const fillCalendar = (calendar, month) => {
+        let date = month ? month.startOf('month').startOf('week') : moment().startOf('month').startOf('week');
+
+        calendar.innerHTML = '';
+        for (let i = 0; i < 7 * 5; i++) {
+
+            // <div class="text-sm text-center mt-2 mx-2 p-2 rounded bg-[#CBCAFF]"></div>
+            const event = [].concat(events.filter((event) => date.date() == event.day && date.month() == event.month))
+            let eventEl = '';
+            event.forEach((e) => eventEl += `
+            <div id="event-${date.date()}-${date.month()}" aria-describedby="tooltip" class="text-sm text-center mt-2 mx-2 p-2 rounded bg-[#CBCAFF] hidden md:block">${e.name}</div>
+            
+            `
+            );
+            /*
+            <div id="tooltip-${date.date()}-${date.month()}" role="tooltip" data-bs-toggle="tooltip" class="p-4">
+                <div class="">${e.name}</div>
+                <div class="">${e.description}</div>
+                
+            </div>
+            */
+
+            calendar.innerHTML +=
+                `
+            <div class="bg-white py-4 flex flex-col items-center text-sm md:text-xl lg:text-2xl ${date.month() !== currentMonth  && 'opacity-50'}">
+                <div class="">${date.date()}</div>
+                <div class="">${date.format("dd")}</div>
+                ${eventEl}
+            </div>
+            `;
+            date.add(1, 'd');
+        }
+    }
+
+    setMonthYear(monthEl, yearEL, moment())
+    fillCalendar(calendarEl)
+</script>
