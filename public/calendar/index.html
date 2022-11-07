@@ -119,8 +119,6 @@
         calendar.innerHTML = '';
         for (let i = 0; i < 7 * 5; i++) {
             const event = [].concat(events.filter((event) => (date.date() === event.day && date.month() === event.month && !event.year) || (date.date() === event.day && date.month() === event.month && date.year() === event.year)))
-            console.log(date.date(), event.year && event[0].year)
-
             calendar.innerHTML +=
                 `
             <div class="hover:outline cursor-pointer relative bg-white py-2 md:py-4 flex flex-col md:justify-center items-center text-sm md:text-xl lg:text-2xl ${date.month() !== currentMonth  && 'opacity-50'}">
