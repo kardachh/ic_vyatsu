@@ -29,8 +29,30 @@
 
             </div>
         </div>
-
-        <div id="calendar" class="mt-4 mx-5 md:mx-10 grid grid-cols-7 gap-[1px] bg-[#E1E1E1] px-[1px]">
+        <div id="days-of-week" class="mt-4 mx-5 md:mx-10 grid grid-cols-7 gap-[1px] bg-[#E1E1E1] px-[1px] pb-[2px]">
+            <div class="bg-white py-4 flex flex-col items-center text-sm md:text-xl lg:text-2xl font-semibold">
+                <div class="">Пн</div>
+            </div>
+            <div class="bg-white py-4 flex flex-col items-center text-sm md:text-xl lg:text-2xl  font-semibold">
+                <div class="">Вт</div>
+            </div>
+            <div class="bg-white py-4 flex flex-col items-center text-sm md:text-xl lg:text-2xl  font-semibold">
+                <div class="">Ср</div>
+            </div>
+            <div class="bg-white py-4 flex flex-col items-center text-sm md:text-xl lg:text-2xl  font-semibold">
+                <div class="">Чт</div>
+            </div>
+            <div class="bg-white py-4 flex flex-col items-center text-sm md:text-xl lg:text-2xl  font-semibold">
+                <div class="">Пт</div>
+            </div>
+            <div class="bg-white py-4 flex flex-col items-center text-sm md:text-xl lg:text-2xl  font-semibold">
+                <div class="">Сб</div>
+            </div>
+            <div class="bg-white py-4 flex flex-col items-center text-sm md:text-xl lg:text-2xl  font-semibold">
+                <div class="">Вс</div>
+            </div>
+        </div>
+        <div id="calendar" class=" mx-5 md:mx-10 grid grid-cols-7 gap-[1px] bg-[#E1E1E1] px-[1px]">
 
         </div>
     </div>
@@ -49,9 +71,20 @@
         {
             month: 11,
             day: 1,
-            name: "День судебного пристава",
+            name: "длинный текст длинный текстдлинный текстдлинный текстдлинный текстдлинный текст",
             description: "ОписаниеОписание ОписаниеОписаниеОписаниеОписаниеОписание ОписаниеОписаниеОписание Описание",
-        }
+        },
+        {
+            month: 10,
+            day: 9,
+            name: "День рождения"
+        },
+        {
+            month: 10,
+            day: 11,
+            year: 2022,
+            name: "Событие без повторений"
+        },
     ]
 
     let selectedMoment = moment();
@@ -85,29 +118,19 @@
 
         calendar.innerHTML = '';
         for (let i = 0; i < 7 * 5; i++) {
-
-            // <div class="text-sm text-center mt-2 mx-2 p-2 rounded bg-[#CBCAFF]"></div>
-            const event = [].concat(events.filter((event) => date.date() == event.day && date.month() == event.month))
-            let eventEl = '';
-            event.forEach((e) => eventEl += `
-            <div id="event-${date.date()}-${date.month()}" aria-describedby="tooltip" class="text-sm text-center mt-2 mx-2 p-2 rounded bg-[#CBCAFF] hidden md:block">${e.name}</div>
-            
-            `
-            );
-            /*
-            <div id="tooltip-${date.date()}-${date.month()}" role="tooltip" data-bs-toggle="tooltip" class="p-4">
-                <div class="">${e.name}</div>
-                <div class="">${e.description}</div>
-                
-            </div>
-            */
+            const event = [].concat(events.filter((event) => (date.date() === event.day && date.month() === event.month && !event.year) || (date.date() === event.day && date.month() === event.month && date.year() === event.year)))
+            console.log(date.date(), event.year && event[0].year)
 
             calendar.innerHTML +=
                 `
-            <div class="bg-white py-4 flex flex-col items-center text-sm md:text-xl lg:text-2xl ${date.month() !== currentMonth  && 'opacity-50'}">
+            <div class="hover:outline cursor-pointer relative bg-white py-2 md:py-4 flex flex-col md:justify-center items-center text-sm md:text-xl lg:text-2xl ${date.month() !== currentMonth  && 'opacity-50'}">
                 <div class="">${date.date()}</div>
-                <div class="">${date.format("dd")}</div>
-                ${eventEl}
+                ${event.length !== 0 ? `
+                <div class="md:absolute h-full md:top-0  md:right-2 lg:right-3 flex items-center">
+                    <div class="w-2 h-2 lg:w-3 lg:h-3 rounded-full bg-[#CBCAFF]">
+
+                    </div>
+                </div>` : ""}
             </div>
             `;
             date.add(1, 'd');
